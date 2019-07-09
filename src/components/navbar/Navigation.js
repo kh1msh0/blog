@@ -6,33 +6,12 @@ import { Link } from 'react-router-dom';
 import { OverlaySearch } from '../search'
 
 import { useStore } from "outstated";
-import { ChangeColor, FetchStrings, GetBlogList, GetTopBlogs, ShowSearch } from "../store";
+import { ChangeColor, ShowSearch } from "../store";
 
 
 
 const Navigation = (props) => {
-    const { setStringLanguage, stringLanguage } = useStore(FetchStrings);
-    const { setBlogLanguage } = useStore(GetBlogList);
-    const { setTopBlogLanguage } = useStore(GetTopBlogs);
     const { showsearch } = useStore(ShowSearch);
-
-
-
-    const ChangeLanguage = () => {
-        let language;
-        if (stringLanguage === 'ka') {
-            language = "en"
-        } else if (stringLanguage === "en") {
-            language = "ka"
-        }
-
-        setStringLanguage(language)
-        setBlogLanguage(language)
-        setTopBlogLanguage(language)
-    }
-
-
-
 
 
     const { changBblog } = useStore(ChangeColor);

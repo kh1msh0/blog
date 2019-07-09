@@ -13,7 +13,7 @@ const InnerGuidePost = ({ match }) => {
 
   async function fetchItem() {
     try {
-      const response = await axios.get(`api/guides/${match.params.card}`);
+      const response = await axios.get(`/api/guides/${match.params.card}`);
       setItem(response.data);
       // console.log(response.data);
       setIsLoading(false);

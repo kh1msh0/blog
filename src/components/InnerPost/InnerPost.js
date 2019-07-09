@@ -12,7 +12,7 @@ const InnerPost = ({ match }) => {
 
   async function fetchItem() {
     try {
-      const response = await axios.get(`api/blogs/${match.params.card}`);
+      const response = await axios.get(`/api/blogs/${match.params.card}`);
       setItem(response.data);
       // console.log(response.data);
       setIsLoading(false);

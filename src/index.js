@@ -1,10 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import axios from 'axios';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {Provider} from 'outstated';
 import { FetchStrings, GetTopBlogs, GetBlogList, ChangeColor, ShowSearch} from './components/store';
+
+
+const lang = ['ka', 'en'].includes(localStorage.getItem('language')) ? localStorage.getItem('language') : 'ka';
+localStorage.setItem('language', lang);
+axios.defaults.headers['Accept-Language'] = lang;
 
 
 

@@ -6,7 +6,7 @@ import { Blog } from "./components/Blog";
 import Guide from "./components/Guide/Guide";
 import InnerGuide from "./components/InnerGuide/InnerGuide";
 import { InnerPost, InnerGuidePost } from "./components/InnerPost";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import { Search } from './components/search'
 import { useStore } from "outstated";
 import { FetchStrings } from "./components/store";
@@ -28,6 +28,7 @@ function App() {
             <Route path="/blog/:card" component={InnerPost} />
             <Route path="/guides/:card" component={InnerGuidePost} />
             <Route path="/search/:search" component={Search} />
+            <Redirect to="/" />
           </Switch>
           <Footer />
         </div>

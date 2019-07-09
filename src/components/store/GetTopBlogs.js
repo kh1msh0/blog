@@ -22,7 +22,7 @@ const GetTopBlogs = () => {
   }
   
   useEffect(() => {
-    fetchItems(`api/blogs/top?lang=${topBlogLanguage}`)
+    fetchItems(`/api/blogs/top?lang=${topBlogLanguage}`)
   }, [topBlogLanguage])
  
 

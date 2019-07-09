@@ -11,7 +11,7 @@ const GetBlogList = () => {
 
   async function fetchItems() {
     try {
-      const response = await axios.get(`api/blogs/?lang=${blogLanguage}&lastId=`);
+      const response = await axios.get(`/api/blogs/?lang=${blogLanguage}&lastId=`);
 
       setTopBlogs(response.data)     
       setIsLoading(false)
@@ -24,7 +24,7 @@ const GetBlogList = () => {
     const islast = blogList[blogList.length-1].id
 
     try {
-      const response = await axios.get(`api/blogs/?lang=${blogLanguage}&lastId=${islast}`);
+      const response = await axios.get(`/api/blogs/?lang=${blogLanguage}&lastId=${islast}`);
 
       setTopBlogs([...blogList,...response.data])     
       setIsLoading(false)

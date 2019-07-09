@@ -28,7 +28,7 @@ const GuideFilter = ({ categoryname, match, catId }) => {
 
     try {
       const response = await axios.get(
-        `api/guides?type=${id}&lastId=&lang=${stringLanguage}&catId=${catId}`
+        `/api/guides?type=${id}&lastId=&lang=${stringLanguage}&catId=${catId}`
       );
       setItems(response.data);
       setIsLoading(false);
@@ -55,7 +55,7 @@ const GuideFilter = ({ categoryname, match, catId }) => {
   
       try {
         const response = await axios.get(
-          `api/guides?type=${id}&lastId=${islast}&lang=${stringLanguage}&catId=${catId}`
+          `/api/guides?type=${id}&lastId=${islast}&lang=${stringLanguage}&catId=${catId}`
         );
         setItems([...items,...response.data]);
         setIsLoading(false);
