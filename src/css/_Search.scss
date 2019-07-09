@@ -1,0 +1,133 @@
+.search_div {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100%;
+  .exit {
+    float: right;
+    color: #fff;
+    padding: 10px;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  .search_input {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    input {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid #fff;
+      background: transparent;
+      color: #fff;
+      // text-align: center;
+      // margin-bottom: 200px;
+      &:focus {
+        outline: none !important;
+        box-shadow: none;
+      }
+    }
+    .searched_items {
+      height: 30vh;
+      width: 100%;
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      overflow: scroll;
+      &::-webkit-scrollbar {
+        width: 0px; /* Remove scrollbar space */
+        background: transparent; /* Optional: just make scrollbar invisible */
+      }
+      .item{
+        cursor: pointer;
+      }
+      a{
+        color: #8c8c8c;
+        &:hover{
+          border: 0.1px solid #ffffff30;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+.search {
+  .posts_head {
+    input {
+      width: 70%;
+      border: none;
+      background: transparent;
+      margin-bottom: 200px;
+      &:focus {
+        outline: none !important;
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+
+.search_inner_post_link{
+  width: 100%;
+}
+.SearchedPost {
+  margin-top: 25px;
+  display: flex;
+  width: 100%;
+  .image {
+    // min-width: 252px;;
+    width: 100%;
+    height: 165px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-color: #00000080;
+  }
+  .text {
+    h4{
+      max-width: 100%;
+    }
+    p {
+      color: #6a6a6a;
+      max-width: 100%;
+      height:120px;
+      overflow: hidden;
+    }
+  }
+}
+
+
+.page-link{
+  border: none;
+  color: #959595;
+  background-color: rgba(239, 174, 94, 0);
+
+  &:focus {
+    outline: none !important;
+    box-shadow: none;
+  }
+  &:hover{
+    background-color: rgba(239, 174, 94, 0);
+    color: #EFAE5E;
+    border-radius: 3px;
+  }
+}
+
+.page-item.active .page-link{
+  color: #EFAE5E;
+  background-color: #ffffff;
+  border: 1px solid #EFAE5E;
+  border-radius: 3px;
+}

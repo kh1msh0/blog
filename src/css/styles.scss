@@ -1,0 +1,131 @@
+@import "./navbar";
+@import "./_blog_part1";
+@import "./_blog_posts";
+@import "./_subscribe";
+@import "./_footer";
+@import "./guide_section1";
+@import "./guide_section2";
+@import "./innerguide";
+@import "./innerpost";
+@import "./Search";
+
+body {
+  a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+      color: black;
+    }
+  }
+  .loading {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    top: 50%;
+    left: 40%;
+  }
+}
+
+.show_more_button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  div {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 336px;
+    background-color: black;
+    color: #fff;
+    cursor: pointer;
+    p {
+      margin: 0px;
+      font-size: 16px;
+    }
+  }
+}
+
+.content {
+  html {
+    img {
+      width: 100%;
+      height: auto;
+    }
+    ol {
+      padding: 0px 0px 0px 15px;
+    }
+  }
+}
+
+.socials_main {
+  display: flex;
+  justify-content: space-between;
+  .socials {
+    margin-bottom: 20px;
+    display: flex;
+    .social_count {
+      display: flex;
+      flex-direction: column;
+      margin-right: 20px;
+      .myShareCountWrapper {
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 0.8;
+      }
+    }
+    .line {
+      height: 52;
+      width: 2px;
+      background-color: #d8d8d8;
+      margin: 0px 4px 0px 4px;
+    }
+    .socials_margin {
+      margin: 0px 4px 0px 4px;
+    }
+  }
+  .link {
+    width: 205px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #d0d0d0;
+    &:hover .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+    }
+    .tooltiptext {
+      margin-top: -50px;
+      border-style: solid;
+      border-color: #555 transparent transparent transparent;
+      visibility: hidden;
+      background-color: #555;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px;
+      position: absolute;
+      z-index: 1;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .icon {
+      color: #efae5e;
+      font-size: 20px;
+      margin: 0px 10px 0px 10px;
+    }
+    textarea {
+      height: 30px;
+      margin: 0px;
+      color: #d0d0d0;
+      border: none;
+      overflow: hidden;
+      outline: none;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      resize: none; /*remove the resize handle on the bottom right*/
+    }
+  }
+}

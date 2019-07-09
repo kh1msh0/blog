@@ -1,0 +1,143 @@
+@mixin blog_part_1_992{
+    @media only screen and (max-width:992px){
+        @content;
+    }
+}
+@mixin blog_part_1_500{
+    @media only screen and (max-width:500px){
+        @content;
+    }
+}
+
+.subscribe_div{
+    width: 100%;
+    height: 300px;
+    border: 1px solid #EFAE5E;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    text-align: center;
+    h3{
+        font-size: 24px;
+        line-height: 1.5;
+        padding: 0 0px;
+        font-weight: 600;
+    }
+    p{
+        font-size: 16px;
+        line-height: 1;
+        padding: 0 10px;
+    }
+    .gmail_input{
+        .form-label{
+            float: left;
+            font-size: 14px;
+        }
+        .input-group{
+            height: 48px;
+        }
+        .form-control{
+            height: calc(2.5em + .75rem + 2px);
+            border-radius: 0rem;
+        }
+
+        .input-group-text {
+            background-color: #EFAE5E;
+            color: #fff;
+            border: none;
+            padding: 1rem 1rem;
+        }
+    }
+}
+
+.joincomunity_div{
+    width: 100%;
+    height: 300px;
+    border: 1px solid #EFAE5E;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    h3{
+        font-size: 24px;
+        line-height: 1.5;
+        padding: 0 10px;
+        font-weight: 600;
+    }
+    p{
+        font-size: 16px;
+        line-height: 1;
+        padding: 0 10px;
+    }
+    .area_circle_logo{
+        height: 72px;
+        width: 72px;
+        border: 1px solid #97979727;
+        border-radius: 50%;
+        box-shadow: 0px 3px 5px #00000017;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        img{
+            width: 100%;
+        }
+    }
+    .joincomunity_button{
+        width: 100%;
+        button{
+            border:none;
+            border-radius: 0;
+            background-color: #EFAE5E;
+            font-size: 16px;
+            font-weight: 400;
+            height: 48px;
+        }
+        a{
+            border:none;
+            border-radius: 0;
+            background-color: #EFAE5E;
+            font-size: 16px;
+            font-weight: 400;
+            height: 48px;   
+        }
+    }
+
+}
+
+
+
+.padding_div {
+    padding: 0px 15px;
+
+    @include blog_part_1_992{
+        padding: 15px;
+        width: 50%;
+        display: flex;
+    } 
+    @include blog_part_1_500{
+        padding: 0px 15px ;
+        width: 100%;
+        // display: flex;
+    } 
+
+}
+
+.posts_head{
+    @include blog_part_1_992{
+        margin-top: 30px;
+    } 
+    @include blog_part_1_500{
+        margin-top: 30px;
+    } 
+}

@@ -1,0 +1,44 @@
+@mixin max_width_500{
+    @media only screen and (max-width:500px){
+        @content;
+    }
+}
+.filter_div{
+    display: flex;
+    border-bottom: 1px solid #D8D8D8;
+    align-items: flex-end;  
+    height: 48px;
+    overflow: scroll;
+    &::-webkit-scrollbar {
+        width: 0px;  /* Remove scrollbar space */
+        background: transparent;  /* Optional: just make scrollbar invisible */
+    }
+    .filter{
+        font-size: 16px;
+        font-weight: 700;
+
+    }
+    ul{
+        display: flex;
+        list-style: none;
+        font-size: 16px;
+        font-weight: 500;
+        margin: 0;
+
+        li{
+            color: #6A6A6A;
+            margin:0px 5px;
+            padding:0px 10px;
+            height: 100%;
+            cursor: pointer;
+            p{
+                margin: 0px
+            }
+        }
+    }
+}
+.guide_filter_header{
+    @include max_width_500{
+        font-size: 24px;
+    }
+}

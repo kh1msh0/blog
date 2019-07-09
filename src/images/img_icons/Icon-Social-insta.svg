@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="16" height="16" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Icon_Social_insta" data-name="Icon/Social/insta" clip-path="url(#clip-path)">
+    <g id="_002-social-media" data-name="002-social-media">
+      <path id="Shape" d="M11.521,15.912H4.391A4.4,4.4,0,0,1,0,11.521V4.391A4.4,4.4,0,0,1,4.391,0h7.13a4.4,4.4,0,0,1,4.391,4.391v7.13A4.4,4.4,0,0,1,11.521,15.912Zm-7.13-14.5A2.982,2.982,0,0,0,1.412,4.391v7.13A2.982,2.982,0,0,0,4.391,14.5h7.13A2.982,2.982,0,0,0,14.5,11.521V4.391a2.982,2.982,0,0,0-2.979-2.979Z" fill="rgba(43,43,43,0.7)"/>
+      <path id="Shape-2" data-name="Shape" d="M4.1,8.2A4.1,4.1,0,1,1,8.2,4.1,4.1,4.1,0,0,1,4.1,8.2Zm0-6.788A2.688,2.688,0,1,0,6.789,4.1,2.691,2.691,0,0,0,4.1,1.412Z" transform="translate(3.856 3.856)" fill="rgba(43,43,43,0.7)"/>
+      <path id="Shape-3" data-name="Shape" d="M1.035,0A1.035,1.035,0,0,0,.3,1.768a1.035,1.035,0,0,0,1.464,0A1.035,1.035,0,0,0,1.035,0Z" transform="translate(11.193 2.659)" fill="rgba(43,43,43,0.7)"/>
+    </g>
+  </g>
+</svg>

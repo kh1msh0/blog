@@ -1,0 +1,376 @@
+{
+	"info": {
+		"_postman_id": "674e61b5-a639-45d4-8f75-b695b01865f9",
+		"name": "blog.area.ge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Create Blog",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "ka.title",
+									"value": "გრძელი სათაურის ადგილი",
+									"type": "text"
+								},
+								{
+									"key": "ka.description",
+									"value": "Lorem Ipsum საბეჭდი და ტიპოგრაფიული ინდუსტრიის უშინაარსო ტექსტია.",
+									"type": "text"
+								},
+								{
+									"key": "ka.content",
+									"value": "Lorem Ipsum საბეჭდი და ტიპოგრაფიული ინდუსტრიის უშინაარსო ტექსტია. იგი სტანდარტად 1500-იანი წლებიდან იქცა, როდესაც უცნობმა მბეჭდავმა ამწყობ დაზგაზე წიგნის საცდელი ეგზემპლარი დაბეჭდა.",
+									"type": "text"
+								},
+								{
+									"key": "en.title",
+									"value": "გრძელი სათაურის ადგილი",
+									"type": "text"
+								},
+								{
+									"key": "en.description",
+									"value": "Lorem Ipsum საბეჭდი და ტიპოგრაფიული ინდუსტრიის უშინაარსო ტექსტია.",
+									"type": "text"
+								},
+								{
+									"key": "en.content",
+									"value": "Lorem Ipsum საბეჭდი და ტიპოგრაფიული ინდუსტრიის უშინაარსო ტექსტია. იგი სტანდარტად 1500-იანი წლებიდან იქცა, როდესაც უცნობმა მბეჭდავმა ამწყობ დაზგაზე წიგნის საცდელი ეგზემპლარი დაბეჭდა.",
+									"type": "text"
+								},
+								{
+									"key": "cover",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "top",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://178.128.21.17/api/admin/blogs",
+							"protocol": "http",
+							"host": [
+								"178",
+								"128",
+								"21",
+								"17"
+							],
+							"path": [
+								"api",
+								"admin",
+								"blogs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Guid",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "ka.title",
+									"value": "გრძელი სათაურის ადგილი",
+									"type": "text"
+								},
+								{
+									"key": "ka.description",
+									"value": "Lorem Ipsum საბეჭდი და ტიპოგრაფიული ინდუსტრიის უშინაარსო ტექსტია.",
+									"type": "text"
+								},
+								{
+									"key": "ka.content",
+									"value": "Lorem Ipsum საბეჭდი და ტიპოგრაფიული ინდუსტრიის უშინაარსო ტექსტია. იგი სტანდარტად 1500-იანი წლებიდან იქცა, როდესაც უცნობმა მბეჭდავმა ამწყობ დაზგაზე წიგნის საცდელი ეგზემპლარი დაბეჭდა.",
+									"type": "text"
+								},
+								{
+									"key": "en.title",
+									"value": "გრძელი სათაურის ადგილი",
+									"type": "text"
+								},
+								{
+									"key": "en.description",
+									"value": "Lorem Ipsum საბეჭდი და ტიპოგრაფიული ინდუსტრიის უშინაარსო ტექსტია.",
+									"type": "text"
+								},
+								{
+									"key": "en.content",
+									"value": "Lorem Ipsum საბეჭდი და ტიპოგრაფიული ინდუსტრიის უშინაარსო ტექსტია. იგი სტანდარტად 1500-იანი წლებიდან იქცა, როდესაც უცნობმა მბეჭდავმა ამწყობ დაზგაზე წიგნის საცდელი ეგზემპლარი დაბეჭდა.",
+									"type": "text"
+								},
+								{
+									"key": "cover",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "top",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "SELL",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://178.128.21.17/api/admin/guides",
+							"protocol": "http",
+							"host": [
+								"178",
+								"128",
+								"21",
+								"17"
+							],
+							"path": [
+								"api",
+								"admin",
+								"guides"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Strings",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"ka\": {\n\t\t\"blog\": \"ბლოგი\",\n        \"guide\": \"გაიდი\",\n        \"subscribeBanner\": {\n            \"title\": \"გახდი ჩვენი სიახლეების გამომწერი\",\n            \"subtitle\": \"თქვენ გამოგეგზავნებათ სიახლეები თვეში ერთხელ\",\n            \"email\": \"ელ-ფოსტა\",\n            \"placeholder\": \"ჩაწერე\"\n        },\n        \"partnerBanner\": {\n            \"title\": \"გახდი ჩვენი წევრი\",\n            \"subtitle\": \"აღმოაჩინე უძრავი ქონება ჩვენს ჯგუფში\",\n            \"icon\": \"https://www.connect.ge/uploads/projects/5c4844bb79a0a.png\",\n            \"buttonTitle\": \"ჩემი არეა\",\n            \"buttonUrl\": \"https://area.ge/\"\n        },\n        \"otherPosts\": \"სხვა პოსტები\",\n        \"showMore\": \"მეტის ნახვა\",\n        \"relatedArticles\": \"Related articles and tips\",\n        \"guides\": {\n            \"title\": \"უახლესი გაიდები\",\n            \"filter\": \"ფილტრი\",\n            \"all\": \"ყველა\",\n            \"buy\": \"ყიდვა\",\n            \"sell\": \"გაყიდვა\",\n            \"investment\": \"ინცესტიცია\"\n        }\n\t}\n}"
+						},
+						"url": {
+							"raw": "http://178.128.21.17/api/admin/strings",
+							"protocol": "http",
+							"host": [
+								"178",
+								"128",
+								"21",
+								"17"
+							],
+							"path": [
+								"api",
+								"admin",
+								"strings"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get Top Blogs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://178.128.21.17/api/blogs/top?lang=ka",
+					"protocol": "http",
+					"host": [
+						"178",
+						"128",
+						"21",
+						"17"
+					],
+					"path": [
+						"api",
+						"blogs",
+						"top"
+					],
+					"query": [
+						{
+							"key": "lang",
+							"value": "ka",
+							"description": "ka/en"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Blog List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://178.128.21.17/api/blogs/?lastId&lang=ka",
+					"protocol": "http",
+					"host": [
+						"178",
+						"128",
+						"21",
+						"17"
+					],
+					"path": [
+						"api",
+						"blogs",
+						""
+					],
+					"query": [
+						{
+							"key": "lastId",
+							"value": null,
+							"description": "id of last element. get 6 element after this id"
+						},
+						{
+							"key": "lang",
+							"value": "ka",
+							"description": "ka/en"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Guides List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://178.128.21.17/api/guides?type=&lastId&lang=ka",
+					"protocol": "http",
+					"host": [
+						"178",
+						"128",
+						"21",
+						"17"
+					],
+					"path": [
+						"api",
+						"guides"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "",
+							"description": "BUY,SELL,INVESTMENT"
+						},
+						{
+							"key": "lastId",
+							"value": null,
+							"description": "id of last element. get 6 element after this id"
+						},
+						{
+							"key": "lang",
+							"value": "ka",
+							"description": "ka/en"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Subscribe",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "vaso991@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://178.128.21.17/api/blogs/subscribe",
+					"protocol": "http",
+					"host": [
+						"178",
+						"128",
+						"21",
+						"17"
+					],
+					"path": [
+						"api",
+						"blogs",
+						"subscribe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Strings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://178.128.21.17/api/strings?lang=ka",
+					"protocol": "http",
+					"host": [
+						"178",
+						"128",
+						"21",
+						"17"
+					],
+					"path": [
+						"api",
+						"strings"
+					],
+					"query": [
+						{
+							"key": "lang",
+							"value": "ka",
+							"description": "ka/en"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

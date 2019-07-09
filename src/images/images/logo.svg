@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="111.683" height="23.804" viewBox="0 0 111.683 23.804">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="111.683" height="23.804" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="logo" clip-path="url(#clip-path)">
+    <g id="logo-2" data-name="logo">
+      <rect id="Rectangle" width="16.622" height="3.154" transform="translate(61.912 0.003)" fill="#efae5e"/>
+      <path id="Path" d="M0,3.161v9.812H16.622V9.819H3.154V3.161H16.622V0H0V3.161Z" transform="translate(61.912 10.831)" fill="#101010"/>
+      <path id="Path-2" data-name="Path" d="M27.554,23.757,13.51,0,11.747,3.107,18.132,13.99H5.221L0,23.8H3.559l3.579-6.658H19.982l3.881,6.614Z" fill="#101010"/>
+      <path id="Path-3" data-name="Path" d="M19.53,7.027A7.027,7.027,0,0,0,12.508,0H0V3.249H12.506a3.778,3.778,0,0,1,0,7.556H0v13H3.156V14.049H9.489l5.7,9.708h3.69L13.12,14.018a7.025,7.025,0,0,0,6.41-6.991Z" transform="translate(34.323)" fill="#101010"/>
+      <path id="Path-4" data-name="Path" d="M27.551,23.757,13.51,0,11.745,3.107,18.132,13.99H5.218L0,23.8H3.556l3.579-6.658H19.982l3.881,6.614Z" transform="translate(84.132)" fill="#101010"/>
+    </g>
+  </g>
+</svg>
