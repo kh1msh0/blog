@@ -16,7 +16,7 @@ const GmailSubscribe = ({ data }) => {
 
     const subscribeMail = () => {
         if (validateEmail(inputvalue)) {
-            axios.post('http://178.128.21.17/api/blogs/subscribe', {
+            axios.post('api/blogs/subscribe', {
                 email: inputvalue
             })
                 .then(function (response) {

@@ -22,7 +22,7 @@ const GuideFirstSection = () => {
 
     try {
       const response = await axios.get(
-        `http://178.128.21.17/api/guides/categories?lang=${stringLanguage}`
+        `api/guides/categories?lang=${stringLanguage}`
       );
       setItems(response.data);
       // console.log(response.data);

@@ -22,7 +22,7 @@ const FetchStrings = () => {
 
 
   useEffect(() => {
-    fetchItems(`http://178.128.21.17/api/strings?lang=${stringLanguage}`)
+    fetchItems(`api/strings?lang=${stringLanguage}`)
   }, [stringLanguage])
 
   return { fetchedStrings,  isLoading, setStringLanguage, stringLanguage };

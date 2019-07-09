@@ -22,7 +22,7 @@ const GetTopBlogs = () => {
   }
   
   useEffect(() => {
-    fetchItems(`http://178.128.21.17/api/blogs/top?lang=${topBlogLanguage}`)
+    fetchItems(`api/blogs/top?lang=${topBlogLanguage}`)
   }, [topBlogLanguage])
  
 
