@@ -6,12 +6,10 @@ const GetBlogList = () => {
   const [blogLanguage, setBlogLanguage] = useState("ka");
   const [isLoading, setIsLoading] = useState(true);
 
-  
-
-
   async function fetchItems() {
     try {
-      const response = await axios.get(`/api/blogs/?lang=${blogLanguage}&lastId=`);
+      setIsLoading(true)
+      const response = await axios.get(`/api/blogs/?lastId=`);
 
       setTopBlogs(response.data)     
       setIsLoading(false)
@@ -22,9 +20,9 @@ const GetBlogList = () => {
 
   async function fetchMoreItems() {
     const islast = blogList[blogList.length-1].id
-
+ 
     try {
-      const response = await axios.get(`/api/blogs/?lang=${blogLanguage}&lastId=${islast}`);
+      const response = await axios.get(`/api/blogs/?lastId=${islast}`);
 
       setTopBlogs([...blogList,...response.data])     
       setIsLoading(false)
@@ -33,10 +31,6 @@ const GetBlogList = () => {
     }
   }
 
-  // const fetchMoreItems = () =>{
-  //   const islast = blogList[blogList.length-1].id
-  //   setUrl(`http://178.128.21.17/api/blogs/?lang=${blogLanguage}&lastId=${islast}`)
-  // }
 
   useEffect(() => {
     fetchItems()

@@ -5,6 +5,7 @@ import { InnerPostbody, InnerPostHead } from "../InnerPost";
 import { BlogPost } from "../Blog";
 import SocialSharing from '../SocialSharing';
 import axios from "axios";
+import Loading from "../Loading";
 
 const InnerGuidePost = ({ match }) => {
   const [item, setItem] = useState({});
@@ -29,7 +30,7 @@ const InnerGuidePost = ({ match }) => {
 
   const { related, title } = item;
   if (isLoading) {
-    return "Loading...";
+    return <Loading/>;
   } else {
     return (
       <Fragment>
@@ -38,17 +39,17 @@ const InnerGuidePost = ({ match }) => {
             {title}
           </div>
           <Row className="blog_part_1_row">
-            <Col xs={12} md={8} className="blog_posts_left">
+            <Col xs={12} md={12} lg={8} className="blog_posts_left">
               <InnerPostbody data={item} />
               <SocialSharing />
               <InnerPostHead content={item.content} />
               <SocialSharing />
             </Col>
-            <Col xs={12} md={4} className="blog_posts_right inner_guide_post_subscribe">
+            <Col xs={12} md={12} lg={4} className="blog_posts_right inner_guide_post_subscribe">
               <Subscribe />
             </Col>
           </Row>
-        </Container>
+        </Container> 
         <Container className="related">
           <div className="related_title">
             <div>Related articles and tips</div>

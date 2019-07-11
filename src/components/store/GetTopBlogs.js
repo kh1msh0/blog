@@ -19,14 +19,14 @@ const GetTopBlogs = () => {
     } catch (error) {
       console.error(error);
     }
-  }
+  } 
   
   useEffect(() => {
-    fetchItems(`/api/blogs/top?lang=${topBlogLanguage}`)
+    fetchItems(`/api/blogs/top`)
   }, [topBlogLanguage])
  
 
-  return { topBlogs, isLoading, setTopBlogLanguage };
+  return { topBlogs, isLoading };
 };
 
 export default GetTopBlogs;

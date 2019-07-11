@@ -8,6 +8,8 @@
 @import "./innerguide";
 @import "./innerpost";
 @import "./Search";
+@import "./loading";
+
 
 body {
   a {
@@ -59,6 +61,12 @@ body {
   }
 }
 
+
+@mixin max_width_500 {
+  @media only screen and (max-width: 500px) {
+    @content;
+  }
+}
 .socials_main {
   display: flex;
   justify-content: space-between;
@@ -68,7 +76,7 @@ body {
     .social_count {
       display: flex;
       flex-direction: column;
-      margin-right: 20px;
+      margin-right: 15px;
       .myShareCountWrapper {
         font-size: 30px;
         font-weight: 700;
@@ -126,6 +134,9 @@ body {
       -moz-box-shadow: none;
       box-shadow: none;
       resize: none; /*remove the resize handle on the bottom right*/
+      @include max_width_500 {
+        display:none;
+      }
     }
   }
 }

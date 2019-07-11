@@ -21,19 +21,18 @@ const Navigation = (props) => {
             <OverlaySearch props={props} />
             <div className="navbar_main">
                 <div className='container'>
-                    <div className='search' onClick={() => showsearch()} >
-                        <FaSistrix className="header_icons" />
-                    </div>
-                    <div className='logo'>
-                        {/* <button onClick={ChangeLanguage}>aaa</button> */}
-                        <Link to="/">
-                            <img onClick={changBblog} src={logo} alt="" />
-                        </Link>
-                    </div>
                     <div className='socials'>
                         <FaFacebookF className="header_icons" />
                         <FaInstagram className="header_icons" />
                         <FaLinkedinIn className="header_icons" />
+                    </div>
+                    <div className='logo'>
+                        <Link to="/">
+                            <img onClick={changBblog} src={logo} alt="" />
+                        </Link>
+                    </div>
+                    <div className='search' onClick={() => showsearch()} >
+                        <FaSistrix className="header_icons" />
                     </div>
                 </div>
             </div>

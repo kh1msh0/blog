@@ -5,6 +5,7 @@ import { InnerPostbody, InnerPostHead } from "../InnerPost";
 import { BlogPost } from "../Blog";
 import SocialSharing from '../SocialSharing';
 import axios from "axios";
+import Loading from "../Loading";
 
 const InnerPost = ({ match }) => {
   const [item, setItem] = useState({});
@@ -21,13 +22,13 @@ const InnerPost = ({ match }) => {
     }
   }
 
-  useEffect(() => {
+  useEffect(() => { 
     fetchItem();
   }, [match.params.card]);
 
   const { related } = item;
   if (isLoading) {
-    return "Loading...";
+    return <Loading/>;
   } else {
     return (
       <Fragment>

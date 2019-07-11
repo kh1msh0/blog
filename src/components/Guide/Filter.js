@@ -33,7 +33,7 @@ const Filter = ({ match }) => {
     }
 
     const { all, buy, sell, investment} = fetchedStrings.data.guides
-    console.log( fetchedStrings.data)
+    // console.log( fetchedStrings.data)
     return (
         <Fragment>
             <div className="filter_div">

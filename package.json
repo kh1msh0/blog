@@ -19,7 +19,6 @@
     "react-share": "^3.0.0"
   },
   "proxy": "http://178.128.21.17/",
-  "homepage": "https://kh1msh0.github.io/blog",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",

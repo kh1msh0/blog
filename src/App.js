@@ -10,11 +10,12 @@ import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-d
 import { Search } from './components/search'
 import { useStore } from "outstated";
 import { FetchStrings } from "./components/store";
+import Loading from "./components/Loading";
 
 function App() {
   const { fetchedStrings, isLoading } = useStore(FetchStrings);
 
-  let content = <div className="loading" >Loading Page....</div>;
+  let content = <Loading/>
 
   if (fetchedStrings && !isLoading) {
     content = (

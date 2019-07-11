@@ -16,7 +16,7 @@ const BlogPosts = () => {
 
     const {otherPosts, showMore} = fetchedStrings.data
     if(isLoading){ 
-        return 'Loading...'
+        return ''
     }else{
         return (
             <Container className="blog_posts_1" >
@@ -30,13 +30,13 @@ const BlogPosts = () => {
                             <BlogPost key={item.id} data={item} />
                             ))}
                         </Row>
-                        {blogList.length >=6 ? <div className="show_more_button" >
+                        {blogList.length >=6 ? <div style={blogList[blogList.length-1].isLast?{display: 'none'}: {}} className="show_more_button" >
                             <div onClick={fetchMoreItems}>
                                 <p>{showMore}</p>
                             </div>
                         </div> : ''}
                     </Col>
-                    <Col xs={12} md={12} lg={4} className="blog_posts_right">
+                    <Col xs={12} md={12} lg={4}  className="blog_posts_right">
                         <div className="posts_head">
                             {fetchedStrings.data.subscribeBanner.title}
                         </div>

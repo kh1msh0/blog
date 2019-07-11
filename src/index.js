@@ -11,7 +11,7 @@ import { FetchStrings, GetTopBlogs, GetBlogList, ChangeColor, ShowSearch} from '
 const lang = ['ka', 'en'].includes(localStorage.getItem('language')) ? localStorage.getItem('language') : 'ka';
 localStorage.setItem('language', lang);
 axios.defaults.headers['Accept-Language'] = lang;
-
+//  console.log(axios.defaults)
 
 
 ReactDOM.render(

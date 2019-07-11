@@ -6,13 +6,7 @@ import axios from 'axios';
 
 
 
- 
-import { useStore } from "outstated";
-import { FetchStrings } from "../store";
-
-
 const GuideFirstSection = () => {
-  const { stringLanguage } = useStore(FetchStrings);
 
   const [items, setItems] = useState({});
   const [isLoading, setIsLoading] = useState(true);
@@ -22,7 +16,7 @@ const GuideFirstSection = () => {
 
     try {
       const response = await axios.get(
-        `/api/guides/categories?lang=${stringLanguage}`
+        `/api/guides/categories`
       );
       setItems(response.data);
       // console.log(response.data);
@@ -35,10 +29,10 @@ const GuideFirstSection = () => {
 
   useEffect(() => {
     fetchItem();
-  }, [stringLanguage]);
+  }, []);
 
   if(isLoading){
-    return 'Loading ...'
+    return ''
   }
   return (
     <Container className="" >

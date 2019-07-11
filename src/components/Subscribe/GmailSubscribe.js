@@ -16,7 +16,7 @@ const GmailSubscribe = ({ data }) => {
 
     const subscribeMail = () => {
         if (validateEmail(inputvalue)) {
-            axios.post('api/blogs/subscribe', {
+            axios.post('api/blogs/subscribe', { 
                 email: inputvalue
             })
                 .then(function (response) {

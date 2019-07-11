@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { BlogPost } from "../Blog";
 import { Subscribe } from "../Subscribe";
 import { Filter } from "../Guide";
+import Loading from '../Loading'
 import { Container, Row, Col } from "react-bootstrap";
 import axios from "axios";
 
@@ -11,7 +12,8 @@ import { FetchStrings } from "../store";
 const GuideFilter = ({ categoryname, match, catId }) => {
   const [items, setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const { fetchedStrings, stringLanguage } = useStore(FetchStrings);
+  const [isLoadingFilter, setIsLoadingFilter] = useState(true);
+  const { fetchedStrings } = useStore(FetchStrings);
 
 
   let id = match.params.id;
@@ -27,11 +29,13 @@ const GuideFilter = ({ categoryname, match, catId }) => {
     }
 
     try {
+      setIsLoadingFilter(true)
       const response = await axios.get(
-        `/api/guides?type=${id}&lastId=&lang=${stringLanguage}&catId=${catId}`
+        `/api/guides?type=${id}&lastId=&catId=${catId}`
       );
       setItems(response.data);
       setIsLoading(false);
+      setIsLoadingFilter(false)
     } catch (error) {
       console.error(error);
     }
@@ -55,7 +59,7 @@ const GuideFilter = ({ categoryname, match, catId }) => {
   
       try {
         const response = await axios.get(
-          `/api/guides?type=${id}&lastId=${islast}&lang=${stringLanguage}&catId=${catId}`
+          `/api/guides?type=${id}&lastId=${islast}&catId=${catId}`
         );
         setItems([...items,...response.data]);
         setIsLoading(false);
@@ -72,13 +76,13 @@ const GuideFilter = ({ categoryname, match, catId }) => {
   
   useEffect(() => {
     fetchItem();
-  }, [id,stringLanguage]);
+  }, [id]);
   
   const { title } = fetchedStrings.data.guides;
   const { showMore } = fetchedStrings.data;
   if (isLoading) {
-    return "Loading..."
-  } else {
+    return <Loading/>
+  } else { 
     return (
       <Container className="blog_posts_1">
         {match.params.id && <h1 className="guide_filter_header" >{title}</h1>}
@@ -91,11 +95,11 @@ const GuideFilter = ({ categoryname, match, catId }) => {
               </div>
             )}
             <Row>
-              {!isLoading ? items.map(item => (
+              {!isLoadingFilter ? items.map(item => (
                 <BlogPost key={item.id} data={item} />
-              )) : 'Loading...'}
+              )) : <Loading/>}
             </Row>
-            {items.length >=6  ? <div className="show_more_button" >
+            {items.length >=6  ? <div style={items[items.length-1].isLast?{display: 'none'}: {}} className="show_more_button" >
               <div onClick={()=>fetchMoreItems()}>
                 <p>{showMore}</p>
               </div>

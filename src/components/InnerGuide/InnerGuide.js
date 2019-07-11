@@ -18,9 +18,9 @@ const InnerGuide = ({match}) => {
 
         try {
             const response = await axios.get(
-                `/api/guides/categories/${catId}?lang=ka`
+                `/api/guides/categories/${catId}`
             );
-            setItems(response.data.category);
+            setItems(response.data.category); 
             setIsLoading(false);
         } catch (error) {
             console.error(error);

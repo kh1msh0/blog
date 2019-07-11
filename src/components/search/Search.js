@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Paginationi from './Paginationi';
 import { Subscribe } from "../Subscribe";
 import { Container, Row, Col } from "react-bootstrap";
+import Loading from '../Loading'
 import { SearchedPost } from '../search';
 import { FaSistrix } from 'react-icons/fa';
 
@@ -22,7 +23,8 @@ const Search = (props) => {
   const searchItem = (e) => {
     if(!(/^ *$/.test(serchingObject))){
       const title = serchingObject
-      axios.post('api/search', {
+      console.log(window.location.origin)
+      axios.post(`http://178.128.21.17/api/search`, {
         key: title
       })
         .then(function (response) {
@@ -37,7 +39,8 @@ const Search = (props) => {
   }
   const searchItemonLoad = (e) => {
     const title = props.match.params.search
-    axios.post('api/search', {
+    console.log(title)
+    axios.post(`http://178.128.21.17/api/search`, {
       key: title
     })
       .then(function (response) {
@@ -79,7 +82,7 @@ const paginate = (pageNumber) => setCurrentPage(pageNumber)
               <input onKeyUp={searchItem} onChange={(e) => setSerchingObject(e.target.value)} placeholder="khachapuri" value={serchingObject} />}
           </div>
           <Row>
-            {isLoading ? 'loading' : currentPosts.map(item => (
+            {isLoading ? <Loading/> : currentPosts.map(item => (
               <SearchedPost key={item.id} item={item} />
             ))}
           </Row>
@@ -93,6 +96,6 @@ const paginate = (pageNumber) => setCurrentPage(pageNumber)
     </Container>
   );
 }
-
+ 
 
 export default Search;
