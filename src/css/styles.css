@@ -1121,7 +1121,7 @@ body .loading {
           justify-content: center;
 }
 
-.show_more_button div {
+.show_more_button .showmore {
   height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1138,9 +1138,13 @@ body .loading {
   cursor: pointer;
 }
 
-.show_more_button div p {
+.show_more_button .showmore p {
   margin: 0px;
   font-size: 16px;
+}
+
+.show_more_button .showmore .text-warning {
+  color: #efae5e !important;
 }
 
 .content html img {

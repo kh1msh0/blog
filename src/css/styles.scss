@@ -33,7 +33,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  div {
+  .showmore {
     height: 50px;
     display: flex;
     justify-content: center;
@@ -45,6 +45,9 @@ body {
     p {
       margin: 0px;
       font-size: 16px;
+    }
+    .text-warning{
+      color:#efae5e !important;
     }
   }
 }

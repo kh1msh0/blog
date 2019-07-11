@@ -5,6 +5,7 @@ const GetBlogList = () => {
   const [blogList, setTopBlogs] = useState([]);
   const [blogLanguage, setBlogLanguage] = useState("ka");
   const [isLoading, setIsLoading] = useState(true);
+  const [loadingItems, setLoadingItems] = useState(false);
 
   async function fetchItems() {
     try {
@@ -22,10 +23,12 @@ const GetBlogList = () => {
     const islast = blogList[blogList.length-1].id
  
     try {
+      setLoadingItems(true)
       const response = await axios.get(`/api/blogs/?lastId=${islast}`);
 
       setTopBlogs([...blogList,...response.data])     
       setIsLoading(false)
+      setLoadingItems(false)
     } catch (error) {
       console.error(error);
     }
@@ -36,7 +39,7 @@ const GetBlogList = () => {
     fetchItems()
   }, [blogLanguage])
 
-  return { blogList, isLoading, fetchMoreItems, setBlogLanguage };
+  return { blogList, isLoading, fetchMoreItems, setBlogLanguage, loadingItems };
 };
 
 export default GetBlogList;

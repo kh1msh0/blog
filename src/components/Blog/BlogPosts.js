@@ -1,6 +1,6 @@
 import React from 'react';
 import BlogPost from './BlogPost';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Spinner } from 'react-bootstrap';
 import {Subscribe} from '../Subscribe';
 
 
@@ -10,7 +10,7 @@ import { FetchStrings, GetBlogList } from "../store";
 
 const BlogPosts = () => {
     const { fetchedStrings } = useStore(FetchStrings);
-    const { blogList, isLoading, fetchMoreItems } = useStore(GetBlogList);
+    const { blogList, isLoading, fetchMoreItems, loadingItems } = useStore(GetBlogList);
 
     
 
@@ -31,8 +31,9 @@ const BlogPosts = () => {
                             ))}
                         </Row>
                         {blogList.length >=6 ? <div style={blogList[blogList.length-1].isLast?{display: 'none'}: {}} className="show_more_button" >
-                            <div onClick={fetchMoreItems}>
-                                <p>{showMore}</p>
+                            <div className="showmore" onClick={fetchMoreItems}>
+                            <Spinner style={loadingItems ? {}: {display: 'none'}} animation="border" variant="warning" />
+                                <p style={loadingItems ? {display: 'none'}: {}}>{showMore}</p>
                             </div>
                         </div> : ''}
                     </Col>
