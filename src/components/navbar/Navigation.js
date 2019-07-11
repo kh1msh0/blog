@@ -22,9 +22,9 @@ const Navigation = (props) => {
             <div className="navbar_main">
                 <div className='container'>
                     <div className='socials'>
-                        <FaFacebookF className="header_icons" />
-                        <FaInstagram className="header_icons" />
-                        <FaLinkedinIn className="header_icons" />
+                        <FaFacebookF className="header_icons facebook" />
+                        <FaInstagram className="header_icons instagram" />
+                        <FaLinkedinIn className="header_icons linkedin" />
                     </div>
                     <div className='logo'>
                         <Link to="/">

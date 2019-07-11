@@ -55,7 +55,7 @@ const SocialSharing = () => {
                 </TwitterShareButton>
                 </div>
                 <div className="link" onClick={copyToClipboard}>
-                <span class="tooltiptext" >{copySuccess}</span>
+                <span className="tooltiptext" >{copySuccess}</span>
                     <IoMdLink className="icon" />
                     <textarea
                     ref={pRef}
