@@ -85,6 +85,7 @@ const paginate = (pageNumber) => setCurrentPage(pageNumber)
             {isLoading ? <Loading/> : currentPosts.map(item => (
               <SearchedPost key={item.id} item={item} />
             ))}
+            {!isLoading && currentPosts.length === 0 ? <div style={{display:'flex', justifyContent:"center", width: '100%', height: '50vh', alignItems: "center"}}><div>No Results</div></div> : ''}
           </Row>
           <Paginationi postsPerPage={postsPerPage} totalPosts={items.length} paginate={paginate} currentPage={currentPage} />
         </Col>

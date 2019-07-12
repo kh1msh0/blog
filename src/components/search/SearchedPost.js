@@ -13,7 +13,6 @@ const SearchedPost = ({ item }) => {
                     <div className="image" style={{ backgroundImage: `url(http://178.128.21.17${cover})` }} >
                     </div>
                 </Col>
-
                 <div className="text">
                     <h4 className="title">
                         {title}

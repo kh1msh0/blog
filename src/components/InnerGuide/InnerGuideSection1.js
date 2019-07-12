@@ -1,17 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-
-
-
-
+import React from 'react';
+import Loading from '../Loading';
 
 const InnerGuideSection1 = ({  items, isLoading }) => {
-   
-
     const { image, title, description } = items;
-    // console.log(items)
     if (isLoading) {
-        return 'Loading...'
+        return <Loading/>
     } else {
         return (
             <div className="inner_guide_img" style={{ backgroundImage: `url(http://178.128.21.17${image})`}}>

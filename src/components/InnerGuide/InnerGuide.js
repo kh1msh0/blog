@@ -3,14 +3,9 @@ import {GuideFilter} from '../Guide/';
 import InnerGuideSection1 from './InnerGuideSection1';
 import axios from "axios";
 
-// import { useStore } from "outstated";
-// import { FetchStrings } from "../store";
 
 const InnerGuide = ({match}) => {
-  
     const catId = match.params.categori 
-
-    // const { stringLanguage } = useStore(FetchStrings);
     const [items, setItems] = useState({});
     const [isLoading, setIsLoading] = useState(true);
 
