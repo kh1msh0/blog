@@ -16,8 +16,6 @@ const GuideFilter = ({ categoryname, match, catId }) => {
   const { fetchedStrings } = useStore(FetchStrings);
   const [loadingItems, setLoadingItems] = useState(false);
 
-
-
   let id = match.params.id;
   async function fetchItem() {
     if (id === "all" || id === "ALL" || !id) {
@@ -41,9 +39,6 @@ const GuideFilter = ({ categoryname, match, catId }) => {
     } catch (error) {
       console.error(error);
     }
-
-
-
   }
 
   const fetchMoreItems = () => {
@@ -54,7 +49,6 @@ const GuideFilter = ({ categoryname, match, catId }) => {
       } else {
         id = id.toUpperCase();
       }
-
       if (!catId || catId === undefined) {
         catId = ''
       }
@@ -73,9 +67,6 @@ const GuideFilter = ({ categoryname, match, catId }) => {
     }
     fetchMoreItems()
   }
-
-
-
 
 
   useEffect(() => {
@@ -103,7 +94,7 @@ const GuideFilter = ({ categoryname, match, catId }) => {
                 <BlogPost key={item.id} data={item} />
               )) : <Loading />}
             </Row>
-            {items.length >= 6 ? <div style={items[items.length - 1].isLast ? { display: 'none' } : {}} className="show_more_button" >
+            {items.length >= 6 ? <div style={items[items.length - 1].isLast ? { display: '' } : {display: 'none'}} className="show_more_button" >
               <div className="showmore" onClick={fetchMoreItems}>
                 <Spinner style={loadingItems ? {} : { display: 'none' }} animation="border" variant="warning" />
                 <p style={loadingItems ? { display: 'none' } : {}}>{showMore}</p>

@@ -31,6 +31,7 @@ const Search = (props) => {
           console.log([...response.data.blogs, ...response.data.guides]);
           setItems([...response.data.blogs, ...response.data.guides])
           setIsLoading(false)
+          setCurrentPage(1)
         })
         .catch(function (error) {
           console.log(error);

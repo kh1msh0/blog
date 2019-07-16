@@ -1,6 +1,0 @@
-<svg id="Icon_Social_FB" data-name="Icon/Social/FB" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-  <rect id="Icon_Social_FB_background" data-name="Icon/Social/FB background" width="16" height="16" fill="rgba(0,0,0,0)"/>
-  <g id="_001-facebook" data-name="001-facebook" transform="translate(4.013 0.889)">
-    <path id="Shape" d="M7.333,0,5.505,0a3.21,3.21,0,0,0-3.38,3.468v1.6H.287A.287.287,0,0,0,0,5.355V7.672a.287.287,0,0,0,.287.287H2.125v5.847a.287.287,0,0,0,.287.287h2.4a.287.287,0,0,0,.287-.287V7.96H7.246a.287.287,0,0,0,.287-.287V5.355a.288.288,0,0,0-.288-.288H5.1V3.712c0-.652.155-.982,1-.982H7.333a.287.287,0,0,0,.287-.287V.29A.287.287,0,0,0,7.333,0Z" fill="rgba(43,43,43,0.7)"/>
-  </g>
-</svg>

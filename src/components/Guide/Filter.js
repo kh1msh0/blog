@@ -37,7 +37,7 @@ const Filter = ({ match }) => {
     return (
         <Fragment>
             <div className="filter_div">
-                <div className="filter">Filter:</div>
+                <div className="filter">ფილტრი:</div>
                 <ul>
                     <Link to="/guide/ALL" >
                         <li onClick={() => chageActive("ALL")} style={active === "ALL" ? styles.activelink : styles.disabledlink}>

@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { Pagination } from 'react-bootstrap';
 
 const Paginationi = ({ postsPerPage, totalPosts, paginate, currentPage }) => {
@@ -9,14 +9,14 @@ const Paginationi = ({ postsPerPage, totalPosts, paginate, currentPage }) => {
     }
     return (
 
-        <Pagination className="justify-content-center">
+        <Pagination className="justify-content-center" style={{alignItems:'center'}}>
             <Pagination.Prev onClick={() => paginate(() => {
                 if (currentPage === 1) {
                     return 1
                 } else {
                     return currentPage - 1
                 }
-            })} />
+            })} >{'<'} <span style={{color: '#2B2B2B'}}>Back</span> </Pagination.Prev>
 
             <Pagination.Item style={currentPage === 1 || currentPage === 2 ? { display: "none" } : { display: "" }} onClick={() => paginate(1)}>{1}</Pagination.Item>
 
@@ -45,7 +45,7 @@ const Paginationi = ({ postsPerPage, totalPosts, paginate, currentPage }) => {
                 } else {
                     return currentPage + 1
                 }
-            })} />
+            })}  ><span style={{color: '#2B2B2B'}}>Next</span> {'>'}</Pagination.Next>
         </Pagination>
     )
 }

@@ -8,8 +8,8 @@
         width: 100%;
         border-bottom: 1px solid #000000;
         font-size: 16px;
-        padding: 5px 0px;
-        height: 48px;
+        padding: 0px 0px 10px 0px;
+        // height: 48px;
     }   
     .blogpost_card{
         width: 50%;
@@ -30,14 +30,13 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                font-weight: 700;
                 div{
                     font-size: 30px;
-                    font-weight: 500;
                     line-height: 1;
                 }
                 p{
                     font-size: 16px;
-                    font-weight: 500;
                 }
             }
         }
@@ -47,9 +46,10 @@
                 padding: 1rem 0 0 0;
                 .card-title{
                     font-size: 18px;
-                    font-weight: 500;
+                    font-weight: 700;
                 }
                 .card-text{
+                    color: #6A6A6A;
                     font-size: 16px;
                     font-weight: 400;
                     height: 70px;
