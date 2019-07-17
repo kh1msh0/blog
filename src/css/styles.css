@@ -295,6 +295,7 @@
   width: 100%;
   border-bottom: 1px solid #000000;
   font-size: 16px;
+  font-weight: 700;
   padding: 0px 0px 10px 0px;
 }
 
@@ -1131,7 +1132,7 @@
 }
 
 body {
-  font-family: "NotoSansGeorgian", 'Noto Sans';
+  font-family: "NotoSansGeorgian", "Noto Sans";
 }
 
 body a {
@@ -1303,5 +1304,19 @@ body .loading {
   .socials_main .link textarea {
     display: none;
   }
+}
+
+.fb-save * html {
+  height: 52px !important;
+}
+
+.fb-save * iframe {
+  opacity: 0.01;
+  width: 52px !important;
+  height: 52px !important;
+}
+
+.fb-save * iframe body ._2tga._3e2a {
+  height: 52px !important;
 }
 /*# sourceMappingURL=styles.css.map */

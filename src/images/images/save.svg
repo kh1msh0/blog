@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="0 0 48 48">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="16" height="16" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Group_4" data-name="Group 4" transform="translate(-204 -756)">
+    <rect id="Rectangle_Copy_7" data-name="Rectangle Copy 7" width="48" height="48" rx="1" transform="translate(204 756)" fill="#4267b2"/>
+    <g id="Icon_Social_FB_Copy" data-name="Icon/Social/FB Copy" transform="translate(219 772)" clip-path="url(#clip-path)">
+      <rect id="Background-2" data-name="Background" width="16" height="16" fill="none"/>
+      <g clip-path="url(#clip-path)">
+        <path id="Combined_Shape" data-name="Combined Shape" d="M11.689,15.792,6,12h6v3.627a.2.2,0,0,1-.311.166ZM0,15.627V1.5A1.5,1.5,0,0,1,1.5,0h9A1.5,1.5,0,0,1,12,1.5V12H6L.31,15.792a.2.2,0,0,1-.111.034A.2.2,0,0,1,0,15.627Z" transform="translate(2)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

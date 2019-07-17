@@ -11,17 +11,16 @@
 @import "./loading";
 
 @font-face {
-  src:url(../fonts/NotoSansGeorgian-Regular.ttf);
+  src: url(../fonts/NotoSansGeorgian-Regular.ttf);
   font-family: NotoSansGeorgian;
 }
 @font-face {
-  src:url(../fonts/NotoSansGeorgian-Bold.ttf);
+  src: url(../fonts/NotoSansGeorgian-Bold.ttf);
   font-family: NotoSansGeorgian_bold;
 }
 
-
 body {
-  font-family: "NotoSansGeorgian", 'Noto Sans';;
+  font-family: "NotoSansGeorgian", "Noto Sans";
   a {
     color: rgb(0, 0, 0);
     text-decoration: none;
@@ -56,8 +55,8 @@ body {
       margin: 0px;
       font-size: 16px;
     }
-    .text-warning{
-      color:#efae5e !important;
+    .text-warning {
+      color: #efae5e !important;
     }
   }
 }
@@ -73,7 +72,6 @@ body {
     }
   }
 }
-
 
 @mixin max_width_500 {
   @media only screen and (max-width: 500px) {
@@ -148,10 +146,25 @@ body {
       box-shadow: none;
       resize: none; /*remove the resize handle on the bottom right*/
       @include max_width_500 {
-        display:none;
+        display: none;
       }
     }
   }
 }
 
-
+.fb-save * {
+  // opacity: 0;
+  html {
+    height: 52px !important;
+  }
+  iframe {
+    body {
+      ._2tga._3e2a {
+        height: 52px !important;
+      }
+    }
+    opacity: 0.01;
+    width: 52px !important;
+    height: 52px !important;
+  }
+}
