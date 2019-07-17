@@ -18,10 +18,10 @@ const Footer = () => {
                     <div className='rights'>
                         © 2019 All rights reserved
                     </div>
-                    <select value={selectedLanguage} onChange={(e) => changeLanguage(e.target.value)}>
+                    {/* <select value={selectedLanguage} onChange={(e) => changeLanguage(e.target.value)}>
                         <option value="ka">ქართული</option>
                         <option value="en">ინგლისური</option>
-                    </select>
+                    </select> */}
                     <div className="line" ></div>
                     <div className='socials'>
                         <FaFacebookF className="header_icons" />
