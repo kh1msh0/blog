@@ -51,8 +51,13 @@ body {
     background-color: black;
     color: #fff;
     cursor: pointer;
+    &:hover{
+      background-color: #2B2B2B;
+
+    }
     p {
-      margin: 0px;
+      margin: 0;
+      margin-left: 5px;
       font-size: 16px;
     }
     .text-warning {
@@ -168,3 +173,15 @@ body {
     height: 52px !important;
   }
 }
+
+
+.new_loader {
+  width: 12px;
+  height: 12px;
+  -webkit-animation:spin 1s linear infinite;
+  -moz-animation:spin 1s linear infinite;
+  animation:spin 1s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

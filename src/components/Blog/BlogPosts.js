@@ -2,7 +2,7 @@ import React from 'react';
 import BlogPost from './BlogPost';
 import { Container, Row, Col, Spinner } from 'react-bootstrap';
 import {Subscribe} from '../Subscribe';
-
+import spiner from '../../images/spinner.svg'
 
 import { useStore } from "outstated";
 import { FetchStrings, GetBlogList } from "../store";
@@ -32,8 +32,13 @@ const BlogPosts = () => {
                         </Row>
                         {blogList.length >=6 ? <div style={blogList[blogList.length-1].isLast?{display: 'none'}: {}} className="show_more_button" >
                             <div className="showmore" onClick={fetchMoreItems}>
-                            <Spinner style={loadingItems ? {}: {display: 'none'}} animation="border" variant="warning" />
-                                <p style={loadingItems ? {display: 'none'}: {}}>{showMore}</p>
+                            {/* <Spinner style={loadingItems ? {}: {visibility: 'hidden'}} animation="border" variant="warning" /> */}
+                            <div style={{marginLeft: '-6px'}}>
+                            <img src={spiner} alt="spiner" className="new_loader"  style={loadingItems ? {}: {visibility: 'hidden'}} />
+                            </div>
+                                <p 
+                                // style={loadingItems ? {display: 'none'}: {}}
+                                >{showMore}</p>
                             </div>
                         </div> : ''}
                     </Col>

@@ -131,6 +131,14 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.blog_part_1 .blog_part_1_left .image_div:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  z-index: 1;
 }
 
 @media only screen and (max-width: 500px) {
@@ -160,6 +168,10 @@
           align-items: flex-start;
   color: #fff;
   padding: 30px;
+}
+
+.blog_part_1 .blog_part_1_left .image_div .gradient:hover {
+  background-color: #00000033;
 }
 
 .blog_part_1 .blog_part_1_left .image_div .gradient h2 {
@@ -203,6 +215,9 @@
     font-size: 18px;
     font-weight: 600;
   }
+  .blog_part_1 .blog_part_1_left .image_div .gradient:hover {
+    background-color: #00000033;
+  }
 }
 
 .blog_part_1 .blog_part_1_right a {
@@ -242,6 +257,14 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.blog_part_1 .blog_part_1_right .image_div:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  z-index: 1;
 }
 
 @media only screen and (max-width: 500px) {
@@ -271,6 +294,10 @@
           align-items: flex-start;
   color: #fff;
   padding: 15px;
+}
+
+.blog_part_1 .blog_part_1_right .image_div .gradient:hover {
+  background-color: #00000033;
 }
 
 .blog_part_1 .blog_part_1_right .image_div .gradient h2 {
@@ -311,7 +338,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -319,6 +345,29 @@
       -ms-flex-pack: end;
           justify-content: flex-end;
   color: #fff;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.blog_posts_1 .blogpost_card .post_image:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.blog_posts_1 .blogpost_card .post_image .onhover_background {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.blog_posts_1 .blogpost_card .post_image .onhover_background:hover {
+  background-color: #00000033;
 }
 
 .blog_posts_1 .blogpost_card .post_image .on_post_image {
@@ -358,7 +407,7 @@
 }
 
 .blog_posts_1 .blogpost_card .card .card-body .card-text {
-  color: #6A6A6A;
+  color: #6a6a6a;
   font-size: 16px;
   font-weight: 400;
   height: 70px;
@@ -426,6 +475,7 @@
   outline: none !important;
   -webkit-box-shadow: none;
           box-shadow: none;
+  border-color: #EFAE5E !important;
 }
 
 .subscribe_div .gmail_input .input-group-text {
@@ -1185,8 +1235,13 @@ body .loading {
   cursor: pointer;
 }
 
+.show_more_button .showmore:hover {
+  background-color: #2B2B2B;
+}
+
 .show_more_button .showmore p {
-  margin: 0px;
+  margin: 0;
+  margin-left: 5px;
   font-size: 16px;
 }
 
@@ -1318,5 +1373,25 @@ body .loading {
 
 .fb-save * iframe body ._2tga._3e2a {
   height: 52px !important;
+}
+
+.new_loader {
+  width: 12px;
+  height: 12px;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 /*# sourceMappingURL=styles.css.map */
