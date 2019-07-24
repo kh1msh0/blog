@@ -2,7 +2,7 @@ import React from 'react';
 import BlogPost from './BlogPost';
 import { Container, Row, Col, Spinner } from 'react-bootstrap';
 import {Subscribe} from '../Subscribe';
-import spiner from '../../images/spinner.svg'
+import spiner from '../../images/spinner.svg';
 
 import { useStore } from "outstated";
 import { FetchStrings, GetBlogList } from "../store";

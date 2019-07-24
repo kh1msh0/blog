@@ -67,12 +67,14 @@
     }
   }
   .blog_part_1_right {
+   
     a {
       width: 100%;
       margin-bottom: 24px;
     }
     .row {
-      margin-right: 0px;
+      // margin-right: 0px;
+      margin: 0px 0px;
     }
     @include blog_part_1_992 {
       a {
@@ -80,7 +82,7 @@
         padding: 15px;
       }
       .row {
-        margin-right: -15px;
+        margin: 0px -15px;
       }
     }
     @include blog_part_1_500 {

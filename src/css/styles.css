@@ -226,7 +226,7 @@
 }
 
 .blog_part_1 .blog_part_1_right .row {
-  margin-right: 0px;
+  margin: 0px 0px;
 }
 
 @media only screen and (max-width: 992px) {
@@ -235,7 +235,7 @@
     padding: 15px;
   }
   .blog_part_1 .blog_part_1_right .row {
-    margin-right: -15px;
+    margin: 0px -15px;
   }
 }
 
