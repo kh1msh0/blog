@@ -20,10 +20,9 @@ import save from "../images/images/save.svg";
 
 const SocialSharing = (props) => {
     const [copySuccess, setCopySuccess] = useState('copy text');
-    const [href, setHref] = useState();
 
     const pRef = useRef(null);
-    const trakiref = useRef(null)
+    const fbref = useRef(null)
 
     function copyToClipboard(e) {
         pRef.current.select();
@@ -33,7 +32,7 @@ const SocialSharing = (props) => {
     };
 
     function loadfb() {
-        window.FB.XFBML.parse(trakiref.current);
+        window.FB.XFBML.parse(fbref.current);
     }
     useEffect(() => {
         if (window.FB) {
@@ -45,10 +44,9 @@ const SocialSharing = (props) => {
                 } catch (e) {
                     console.log(e)
                 }
-            }, 3000)
+            }, 4000)
         }
 
-        setHref(window.location.href)
     }, [])
     return (
         <Fragment>
@@ -64,18 +62,18 @@ const SocialSharing = (props) => {
                     </div>
                     <div className="line" />
                     <FacebookShareButton className='socials_margin' url={window.location.href}>
-                        <FacebookIcon size={52} round={false} />
+                        <FacebookIcon size={'100%'} round={false} />
                     </FacebookShareButton>
-                    <LinkedinShareButton className='socials_margin' url={window.location.href}>
-                        <LinkedinIcon size={52} round={false} />
-                    </LinkedinShareButton>
-                    <TwitterShareButton className='socials_margin' url={window.location.href}>
-                        <TwitterIcon size={52} round={false} />
-                    </TwitterShareButton>
-                    <div ref={trakiref}>
-                        <img style={{height: '52px', width:'52px', position: 'absolute'}} src={save} alt=""/>
+                    <div ref={fbref} className='socials_margin' >
+                        <img style={{height: '100%', width:'100%'}} src={save} alt=""/>
                     <div className="fb-save " data-uri={window.location.href} data-size="large"></div>
                     </div>
+                    <LinkedinShareButton className='socials_margin' url={window.location.href}>
+                        <LinkedinIcon size={'100%'} round={false} />
+                    </LinkedinShareButton>
+                    <TwitterShareButton className='socials_margin' url={window.location.href}>
+                        <TwitterIcon size={'100%'} round={false} />
+                    </TwitterShareButton>
 
                 </div>
                 <div className="link" onClick={copyToClipboard}>

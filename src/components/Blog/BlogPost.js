@@ -9,7 +9,8 @@ const BlogPost = ({data}) => {
     return (
         <div className="blogpost_card">
             <Card >
-            <Link to = {data.categories ? `/guides/${id}` :`/blog/${id}`} >
+            <Link  to = {data.categories ? `/guides/${id}` :`/blog/${id}`} >
+                <div className='outer_div'>
                 <div className="post_image" style={{backgroundImage: `url(http://178.128.21.17${cover})`}}>
                     <div className="onhover_background">
                     <div className="on_post_image">
@@ -21,6 +22,7 @@ const BlogPost = ({data}) => {
                         </p>
                     </div>
                     </div>
+                </div>
                 </div>
                 <Card.Body>
                     <Card.Title>{title}</Card.Title>

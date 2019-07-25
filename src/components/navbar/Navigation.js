@@ -25,7 +25,7 @@ const Navigation = (props) => {
             <div className="navbar_main">
                 <div className='container'>
                     <div className='socials'>
-                        <FaFacebookF className="header_icons facebook" />
+                        {/* <FaFacebookF className="header_icons facebook" />
                         <svg width="0" height="0">
                             <radialGradient id="rg" r="150%" cx="30%" cy="107%">
                                 <stop stopColor="#fdf497" offset="0" />
@@ -39,7 +39,7 @@ const Navigation = (props) => {
                             <FaInstagram className="header_icons instagram" />
                         </div>
 
-                        <FaLinkedinIn className="header_icons linkedin" />
+                        <FaLinkedinIn className="header_icons linkedin" /> */}
                     </div>
                     <div className='logo'>
                         <Link to="/">

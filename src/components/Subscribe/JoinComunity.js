@@ -18,7 +18,7 @@ const JoinComunity = ({ data }) => {
                     <img src={`http://178.128.21.17${icon}`} alt="" />
                 </div>
                 <div className="joincomunity_button">
-                    <Button href={buttonUrl} variant="primary" size="lg" block>
+                    <Button href={buttonUrl} style={{padding: '.8rem 1rem'}} variant="primary" size="lg" block>
                         {buttonTitle}
                     </Button>
                 </div>

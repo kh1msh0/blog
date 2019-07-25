@@ -86,6 +86,7 @@ body {
 .socials_main {
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
   .socials {
     margin-bottom: 20px;
     display: flex;
@@ -93,31 +94,57 @@ body {
       display: flex;
       flex-direction: column;
       margin-right: 15px;
+      @include max_width_500 {
+        font-size: 12px;
+      }
       .myShareCountWrapper {
         font-size: 30px;
         font-weight: 700;
         line-height: 0.8;
+        @include max_width_500 {
+          font-size: 16px;
+        }
       }
     }
     .line {
-      height: 52;
+      height: 52px;
       width: 2px;
       background-color: #d8d8d8;
       margin: 0px 4px 0px 4px;
+      @include max_width_500 {
+        height: 32px;
+        
+      }
     }
     .socials_margin {
       margin: 0px 4px 0px 4px;
+      width: 48px;
+      height: 48px;
+      @include max_width_500 {
+        width: 32px;
+        height: 32px;
+        
+      }
     }
   }
   .link {
+    margin-left: 4px;
     width: 205px;
-    height: 52px;
+    height: 48px;
     display: flex;
     align-items: center;
     border: 1px solid #d0d0d0;
+    border-radius: 1px;
     &:hover .tooltiptext {
       visibility: visible;
       opacity: 1;
+    }
+    @include max_width_500 {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     .tooltiptext {
       margin-top: -50px;
@@ -138,6 +165,10 @@ body {
       color: #efae5e;
       font-size: 20px;
       margin: 0px 10px 0px 10px;
+      @include max_width_500 {
+        margin: 0px 2px 0px 2px;
+        
+      }
     }
     textarea {
       height: 30px;
@@ -168,7 +199,7 @@ body {
         height: 52px !important;
       }
     }
-    opacity: 0.01;
+    opacity: .01;
     width: 52px !important;
     height: 52px !important;
   }

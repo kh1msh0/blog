@@ -50,7 +50,7 @@ const GmailSubscribe = ({ data }) => {
                         <Form.Label>{email}</Form.Label>
                         <InputGroup>
                             <Form.Control
-                                style={bordercolor ? { border: "1px solid #ced4da" } : { border: "1px solid red" }}
+                                style={bordercolor ? { border: "1px solid #ced4da", height: '48px' } : { border: "1px solid red", height: '48px' }}
                                 onChange={(e) => setInputvalue(e.target.value)}
                                 type="email"
                                 placeholder={placeholder}

@@ -88,7 +88,7 @@ const paginate = (pageNumber) => setCurrentPage(pageNumber)
             ))}
             {!isLoading && currentPosts.length === 0 ? <div style={{display:'flex', justifyContent:"center", width: '100%', height: '50vh', alignItems: "center"}}><div>No Results</div></div> : ''}
           </Row>
-          <Paginationi postsPerPage={postsPerPage} totalPosts={items.length} paginate={paginate} currentPage={currentPage} />
+          { items.length === 0 ?'':<Paginationi postsPerPage={postsPerPage} totalPosts={items.length} paginate={paginate} currentPage={currentPage} />}
         </Col>
         <Col xs={12} md={12} lg={4} className="blog_posts_right">
           <div className="posts_head">Title goes here</div>
