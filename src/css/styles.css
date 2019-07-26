@@ -394,10 +394,6 @@
           justify-content: flex-end;
 }
 
-.blog_posts_1 .blogpost_card .post_image .onhover_background:hover {
-  background-color: #00000033;
-}
-
 .blog_posts_1 .blogpost_card .post_image .on_post_image {
   display: -webkit-box;
   display: -ms-flexbox;
