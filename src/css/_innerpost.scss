@@ -1,21 +1,20 @@
-
-@mixin max_width_992{
-    @media only screen and (max-width:992px){
-        @content;
-    }
+@mixin max_width_992 {
+  @media only screen and (max-width: 992px) {
+    @content;
+  }
 }
 
-@mixin max_width_500{
-    @media only screen and (max-width:500px){
-        @content;
-    }
+@mixin max_width_600 {
+  @media only screen and (max-width: 600px) {
+    @content;
+  }
 }
 
 .inner_post_section1_div {
-    font-size: 30px;
-    font-weight: 900;
-    max-width: 630px;
-    margin-bottom: 30px;
+  font-size: 30px;
+  font-weight: 900;
+  max-width: 630px;
+  margin-bottom: 30px;
 }
 .inner_post_section1 {
   width: 100%;
@@ -44,77 +43,106 @@
 }
 
 .related {
-    .related_title{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        font-size: 28px;
-        font-weight: 700;
-        margin-bottom: 16px;
-        div{
-            font-size: 20px;
-            font-weight: 400;
-        }
-        .line{
-            height: 2px;
-            background-color: #D8D8D8;
-            width: 70%;
-            @include max_width_992{
-                width: 30%;
-            }
-            @include max_width_500{
-                width: 20%;
-            }
-        }
+  .related_background_color {
+    background-color: #00000033;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .hidden_related {
+    display: none;
+    @include max_width_992 {
+      display: block;
     }
-  
-  .blogpost_card{
-  
+  }
+  .inner_related {
+    .outer_div {
+      @include max_width_992 {
+        margin-bottom: 16px;
+      }
+    }
+    .for_relater_responsive {
+      @include max_width_600 {
+        position: absolute;
+        z-index: 1;
+        margin-top: -130px;
+        color: white;
+        margin-left: 19px;
+      }
+    }
+  }
+  .related_title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    margin-top: 60px;
+    div {
+      font-size: 20px;
+      font-weight: 400;
+    }
+    .line {
+      height: 2px;
+      background-color: #d8d8d8;
+      width: 70%;
+      @include max_width_992 {
+        width: 30%;
+      }
+      @include max_width_600 {
+        width: 20%;
+      }
+    }
+  }
+
+  .blogpost_card {
     width: 100%;
     // padding:15px;
-    .post_image{
-        width: 100%;
-        height: 252px;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
-        padding: 20px;
+    .post_image {
+      width: 100%;
+      height: 252px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      display: flex;
+      justify-content: flex-end;
+      color: #fff;
+      .on_post_image {
         display: flex;
-        justify-content: flex-end;
-        color: #fff;
-        .on_post_image{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            div{
-                font-size: 30px;
-                font-weight: 500;
-                line-height: 1;
-            }
-            p{
-                font-size: 16px;
-                font-weight: 500;
-            }
+        flex-direction: column;
+        align-items: center;
+        div {
+          font-size: 30px;
+          font-weight: 500;
+          line-height: 1;
         }
-    }
-    .card{
-        border: none;
-        .card-body{
-            padding: 1rem 0 0 0;
-            .card-title{
-                font-size: 18px;
-                font-weight: 500;
-            }
-            .card-text{
-                font-size: 16px;
-                font-weight: 400;
-                height: 70px;
-                overflow: hidden;
-                text-overflow: ellipsis; 
-            }
+        p {
+          font-size: 16px;
+          font-weight: 500;
         }
+      }
     }
-}
+    .card {
+      border: none;
+      .card-body {
+        padding: 1rem 0 0 0;
+        .card-title {
+          font-size: 18px;
+          font-weight: 500;
+        }
+        .card-text {
+          font-size: 16px;
+          font-weight: 400;
+          height: 70px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+  }
 }

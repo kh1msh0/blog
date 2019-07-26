@@ -58,11 +58,20 @@ const InnerPost = ({ match }) => {
                 <div className="line"></div>
             </div>
           <Row>
-              {related.map(item => (
-                <Col key={item.id} xs={12} md={4} >
-                    <BlogPost  data={item} />
+              {/* {related.map(item => ( */}
+                <Col className='inner_related' xs={12} md={6} lg={4}  >
+                    <BlogPost  data={related[0]} />
                 </Col>
-              ))}
+                <Col className='inner_related' xs={12} md={6} lg={4} >
+                    <BlogPost  data={related[1]} />
+                </Col>
+                <Col className='inner_related' xs={12} md={6} lg={4} >
+                    <BlogPost  data={related[2]} />
+                </Col>
+                <Col className='inner_related hidden_related' xs={12} md={6} lg={4} >
+                    <BlogPost  data={related[3]} />
+                </Col>
+              {/* ))} */}
           </Row>
         </Container>
       </Fragment>
