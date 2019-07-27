@@ -11,9 +11,8 @@ const BlogPost = ({ data }) => {
           <div className="outer_div">
             <div
               className="post_image"
-              style={{ backgroundImage: `url(http://178.128.21.17${cover})` }}
+              style={{ backgroundImage: `url(http://178.128.21.17${cover})`}}
             >
-              <div className='related_background_color'>
                 <div className="onhover_background">
                   <div className="on_post_image">
                     <div>{day}</div>
@@ -22,7 +21,6 @@ const BlogPost = ({ data }) => {
                 </div>
               </div>
             </div>
-          </div>
           <Card.Body className="for_relater_responsive">
             <Card.Title>{title}</Card.Title>
             <Card.Text>{description}</Card.Text>

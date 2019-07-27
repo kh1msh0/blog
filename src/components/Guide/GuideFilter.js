@@ -130,7 +130,7 @@ const GuideFilter = ({ categoryname, match, catId }) => {
               ""
             )}
           </Col>
-          <Col xs={12} md={12} lg={4} className="blog_posts_right">
+          <Col xs={12} md={12} lg={4} className="blog_posts_right" id='testi'>
             <div className="posts_head">
               {fetchedStrings.data.subscribeBanner.title}
             </div>

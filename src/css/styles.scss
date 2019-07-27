@@ -216,3 +216,14 @@ body {
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
+
+
+
+.scroll{
+  transition: all 0.5s;
+  @include max_width_500 {
+    position: unset !important;
+  }
+}

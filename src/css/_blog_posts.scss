@@ -41,7 +41,7 @@
         display: flex;
         justify-content: flex-end;
         &:hover {
-          // background-color: #00000033;
+          background-color: #00000033;
         }
       }
       .on_post_image {
@@ -52,8 +52,10 @@
         div {
           font-size: 30px;
           line-height: 1;
+          text-shadow: 0px 6px 14px #0000006c;
         }
         p {
+          text-shadow: 0px 6px 14px #0000006c;
           font-size: 16px;
         }
       }
