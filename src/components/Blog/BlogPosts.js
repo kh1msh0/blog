@@ -37,7 +37,6 @@ const BlogPosts = () => {
                             <img src={spiner} alt="spiner" className="new_loader"  style={loadingItems ? {}: {visibility: 'hidden'}} />
                             </div>
                                 <p 
-                                // style={loadingItems ? {display: 'none'}: {}}
                                 >{showMore}</p>
                             </div>
                         </div> : ''}

@@ -874,7 +874,9 @@
   font-size: 30px;
   font-weight: 900;
   max-width: 630px;
-  margin-bottom: 30px;
+  margin-bottom: 16px;
+  margin-top: 16px;
+  line-height: 1;
 }
 
 .inner_post_section1 {
@@ -1547,5 +1549,19 @@ body .loading {
   .scroll {
     position: unset !important;
   }
+}
+
+.subscribe {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 /*# sourceMappingURL=styles.css.map */

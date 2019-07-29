@@ -45,8 +45,8 @@ const InnerGuidePost = ({ match }) => {
               <InnerPostHead content={item.content} />
               <SocialSharing />
             </Col>
-            <Col xs={12} md={12} lg={4} className="blog_posts_right inner_guide_post_subscribe">
-              <Subscribe />
+            <Col xs={12} md={12} lg={4} className="blog_posts_right inner_guide_post_subscribe" id='testi'>
+              <Subscribe innerpostsScroll={true} />
             </Col>
           </Row>
         </Container> 
@@ -56,11 +56,18 @@ const InnerGuidePost = ({ match }) => {
             <div className="line"></div>
           </div>
           <Row>
-            {related.map(item => (
-              <Col key={item.id} xs={12} md={4} >
-                <BlogPost data={item} />
-              </Col>
-            ))}
+          <Col className="inner_related" xs={12} md={6} lg={4}>
+              <BlogPost data={related[0]} />
+            </Col>
+            <Col className="inner_related" xs={12} md={6} lg={4}>
+              <BlogPost data={related[1]} />
+            </Col>
+            <Col className="inner_related" xs={12} md={6} lg={4}>
+              <BlogPost data={related[2]} />
+            </Col>
+            <Col className="inner_related hidden_related" xs={12} md={6} lg={4}>
+              <BlogPost data={related[3]} />
+            </Col>
           </Row>
         </Container>
       </Fragment>

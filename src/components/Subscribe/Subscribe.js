@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
-import ReactDOM from 'react-dom';
+import React, { useState, useEffect } from 'react';
 import GmailSubscribe from './GmailSubscribe';
 import JoinComunity from './JoinComunity';
 import { Row } from 'react-bootstrap';
@@ -9,30 +8,40 @@ import { FetchStrings } from "../store";
 
 
 
-
-
-
-
-const Subscribe = () => {
+const Subscribe = props => {
   const { fetchedStrings } = useStore(FetchStrings);
   const [scrolled, setScrolled] = useState(false);
+  const [isEnd, setIsEnd] = useState(false);
 
 
   useEffect(()=>{
     window.addEventListener('scroll', () => {
+    
       var testDiv = document.getElementById("testi");
+     
+
       if (testDiv){
         var isTop = window.scrollY < testDiv.offsetTop - 27;
       }else{
         isTop = true
       }
-      console.log(document.body.scrollHeight)
+
       if (isTop !== true){
         setScrolled(true)
       }else{
         setScrolled(false)
       }
+
+      if(document.body.scrollHeight - window.scrollY < 1284 && props.innerpostsScroll ){
+        setIsEnd(true)
+      }else{
+        
+        setIsEnd(false)
+      }
+    
     })
+
+    return (() => {})
 
   }, [])
   
@@ -44,8 +53,8 @@ const Subscribe = () => {
  
   
   let content = (
-    <div className='subscribe'  >
-      <Row className='scroll' style={ scrolled ? style : {} }>
+    <div className={ isEnd ? 'subscribe' : ''}  >
+      <Row className='scroll' style={ scrolled && !isEnd ? style : {} }>
       <GmailSubscribe className='test' data={fetchedStrings.data.subscribeBanner} />
       <JoinComunity data={fetchedStrings.data.partnerBanner}  />
       </Row>

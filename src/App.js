@@ -36,9 +36,6 @@ function App() {
       </Router>
     );
   } 
-  // else if (!fetchedStrings && !isLoading) {
-  //   content = <div>ar itvirteba</div>
-  // }
   return content;
 }
 
