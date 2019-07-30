@@ -134,7 +134,7 @@ const GuideFilter = ({ categoryname, match, catId }) => {
             <div className="posts_head">
               {fetchedStrings.data.subscribeBanner.title}
             </div>
-            <Subscribe />
+            <Subscribe blogInnerpostsScroll={true}/>
           </Col>
         </Row>
       </Container>

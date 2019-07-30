@@ -18,7 +18,6 @@ const Subscribe = props => {
     window.addEventListener('scroll', () => {
     
       var testDiv = document.getElementById("testi");
-     
 
       if (testDiv){
         var isTop = window.scrollY < testDiv.offsetTop - 27;
@@ -32,7 +31,8 @@ const Subscribe = props => {
         setScrolled(false)
       }
 
-      if(document.body.scrollHeight - window.scrollY < 1284 && props.innerpostsScroll ){
+      if((document.body.scrollHeight - window.scrollY < 1284 && props.innerpostsScroll) ||
+      (document.body.scrollHeight - window.scrollY < 774 && props.blogInnerpostsScroll) ){
         setIsEnd(true)
       }else{
         
