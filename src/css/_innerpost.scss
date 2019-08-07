@@ -11,6 +11,7 @@
 }
 
 .inner_post_section1_div {
+  font-family: "NotoSansGeorgian_bold", "NotoSans_bold","sans-serif";
   font-size: 30px;
   font-weight: 900;
   max-width: 630px;
@@ -45,14 +46,59 @@
 }
 
 .related {
-  .onhover_background {
-    background-color: #00000033;
+
+  .outer_div {
+    border-radius: 1px;
+    height: 252px;
+    overflow: hidden;
     width: 100%;
-    height: 100%;
-    padding: 20px;
-    display: flex;
-    justify-content: flex-end;
+    .post_image {
+      width: 100%;
+      height: 252px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      display: flex;
+      justify-content: flex-end;
+      color: #fff;
+      transition: all 0.5s;
+    }
+    .onhover_background {
+      z-index: 1;
+      position: absolute;
+      width: 100%;
+      height: 252px;
+      padding: 20px;
+      display: flex;
+      justify-content: flex-end;
+      &:hover {
+        background-color: #00000033;
+      }
+      &:hover + .post_image{
+        transform: scale(1.1);
+      }
+    }
+    .on_post_image {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-weight: 700;
+      color: #fff;
+      div {
+        color: '#fff';
+        font-size: 30px;
+        line-height: 1;
+        text-shadow: 0px 6px 14px #0000006c;
+      }
+      p {
+        color: '#fff';
+        text-shadow: 0px 6px 14px #0000006c;
+        font-size: 16px;
+      }
+    }
   }
+
   .hidden_related {
     display: none;
     @include max_width_992 {
@@ -134,10 +180,12 @@
       .card-body {
         padding: 1rem 0 0 0;
         .card-title {
+          font-family: "NotoSansGeorgian_SemiBold", "NotoSans_SemiBold","sans-serif";
           font-size: 18px;
-          font-weight: 500;
+          font-weight: 700;
         }
         .card-text {
+          color:#6A6A6A;
           font-size: 16px;
           font-weight: 400;
           height: 70px;

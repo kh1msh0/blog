@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useRef, useEffect, useScript } from 'react';
+import React, { Fragment, useState, useRef, useEffect } from 'react';
 import {
     FacebookShareButton,
     LinkedinShareButton,

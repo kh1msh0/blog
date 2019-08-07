@@ -26,6 +26,7 @@
   margin-bottom: 30px;
   .blog_part_1_left {
     .outer_div_first_section{
+      border-radius: 1px;
       overflow: hidden;
       width: 100%;
       position: relative;
@@ -57,14 +58,14 @@
       }
       @include gradient(30px);
       h2 {
+        font-family: "NotoSansGeorgian_SemiBold", "NotoSans_semibold","sans-serif";
         font-size: 30px;
-        font-weight: 700;
         color:#fff;
       }
       h5 {
         color:#fff;
         font-size: 16px;
-        font-weight: 400;
+        font-family: "NotoSansGeorgian_regular", "NotoSans_regular","sans-serif";
         max-height: 38px;
         width: 100%;
         overflow: hidden;
@@ -109,6 +110,7 @@
       }
     }
     .outer_div_first_section{
+      border-radius: 1px;
       overflow: hidden;
       width: 100%;
       position: relative;
@@ -139,7 +141,7 @@
         @include gradient(15px);
         h2 {
           font-size: 18px;
-          font-weight: 700;
+          font-family: "NotoSansGeorgian_SemiBold", "NotoSans_semibold","sans-serif";
           color:#fff;
         }
         h5 {
@@ -157,7 +159,8 @@
 }
 
 .btn-light {
-  font-weight: 700;
+  font-family: "NotoSansGeorgian_bold", "NotoSans_bold","sans-serif";
+  font-size: 14px;
   &:hover{
     color: #212529;
     background-color: #f8f9fa;

@@ -20,7 +20,7 @@ const Subscribe = props => {
       var testDiv = document.getElementById("testi");
 
       if (testDiv){
-        var isTop = window.scrollY < testDiv.offsetTop - 27;
+        var isTop = window.scrollY < testDiv.offsetTop -60;
       }else{
         isTop = true
       }
@@ -31,8 +31,7 @@ const Subscribe = props => {
         setScrolled(false)
       }
 
-      if((document.body.scrollHeight - window.scrollY < 1284 && props.innerpostsScroll) ||
-      (document.body.scrollHeight - window.scrollY < 774 && props.blogInnerpostsScroll) ){
+      if((document.body.scrollHeight - window.scrollY < 1284 && props.innerpostsScroll)){
         setIsEnd(true)
       }else{
         
@@ -53,8 +52,8 @@ const Subscribe = props => {
  
   
   let content = (
-    <div className={ isEnd ? 'subscribe' : ''}  >
-      <Row className='scroll' style={ scrolled && !isEnd ? style : {} }>
+    <div className={props.innerpostsScroll &&  isEnd ? 'subscribe' : ''}  >
+      <Row className='scroll' style={props.innerpostsScroll && scrolled && !isEnd ? style : {} }>
       <GmailSubscribe className='test' data={fetchedStrings.data.subscribeBanner} />
       <JoinComunity data={fetchedStrings.data.partnerBanner}  />
       </Row>

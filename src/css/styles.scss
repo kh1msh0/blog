@@ -12,15 +12,31 @@
 
 @font-face {
   src: url(../fonts/NotoSansGeorgian-Regular.ttf);
-  font-family: NotoSansGeorgian;
+  font-family: NotoSansGeorgian_regular;
 }
 @font-face {
   src: url(../fonts/NotoSansGeorgian-Bold.ttf);
   font-family: NotoSansGeorgian_bold;
 }
+@font-face {
+  src: url(../fonts/NotoSansGeorgian-SemiBold.ttf);
+  font-family: NotoSansGeorgian_SemiBold;
+}
+@font-face {
+  src: url(../fonts/NotoSans-Bold.ttf);
+  font-family: NotoSans_bold;
+}
+@font-face {
+  src: url(../fonts/NotoSans-Regular.ttf);
+  font-family: NotoSans_regular;
+}
+
+
+
+
 
 body {
-  font-family: "NotoSansGeorgian", "Noto Sans";
+  font-family: "NotoSansGeorgian_regular", "NotoSans_regular","sans-serif";
   a {
     color: rgb(0, 0, 0);
     text-decoration: none;
@@ -98,8 +114,9 @@ body {
         font-size: 12px;
       }
       .myShareCountWrapper {
+        font-family: "NotoSans_bold", "NotoSansGeorgian_bold", "sans-serif";
         font-size: 30px;
-        font-weight: 700;
+        font-weight: 900;
         line-height: 0.8;
         @include max_width_500 {
           font-size: 16px;
@@ -134,7 +151,7 @@ body {
     display: flex;
     align-items: center;
     border: 1px solid #d0d0d0;
-    border-radius: 2px;
+    border-radius: 1px;
     &:hover .tooltiptext {
       visibility: visible;
       opacity: 1;

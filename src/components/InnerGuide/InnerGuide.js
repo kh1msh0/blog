@@ -26,7 +26,7 @@ const InnerGuide = ({match}) => {
     useEffect(() => {
         fetchItem();
     }, []);
-   
+   console.log(items)
 
     return (
         <Fragment>

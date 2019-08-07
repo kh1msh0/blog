@@ -69,10 +69,42 @@ const GuideFilter = ({ categoryname, match, catId }) => {
     }
     fetchMoreItems();
   };
+  const [scrolled, setScrolled] = useState(false);
+  const [isEnd, setIsEnd] = useState(false);
+  const [testDivWidth, setTestDivWidth] = useState(null);
 
   useEffect(() => {
     fetchItem();
+    window.addEventListener("scroll", () => {
+      var testDiv = document.getElementById("testi");
+      if (testDiv) {
+        setTestDivWidth(testDiv.offsetWidth);
+        var isTop = window.scrollY < testDiv.offsetTop - 70;
+      } else {
+        isTop = true;
+      }
+
+      if (isTop !== true) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+
+      if (document.body.scrollHeight - window.scrollY < 860) {
+        setIsEnd(true);
+      } else {
+        setIsEnd(false);
+      }
+    });
+
+    return () => {};
   }, [id]);
+  const style = {
+    position: "fixed",
+    top: "70px",
+    flexDirection: "column",
+    width: `${testDivWidth - 30}px`
+  };
 
   const { title } = fetchedStrings.data.guides;
   const { showMore } = fetchedStrings.data;
@@ -130,11 +162,19 @@ const GuideFilter = ({ categoryname, match, catId }) => {
               ""
             )}
           </Col>
-          <Col xs={12} md={12} lg={4} className="blog_posts_right" id='testi'>
-            <div className="posts_head">
-              {fetchedStrings.data.subscribeBanner.title}
+          <Col xs={12} md={12} lg={4} className="blog_posts_right" id="testi">
+            <div
+              className={isEnd ? "subscribe" : ""}
+              style={scrolled && !isEnd ? style : null}
+            >
+              <div
+                className="posts_head"
+                style={{ width: `${testDivWidth - 30}px` }}
+              >
+                {fetchedStrings.data.subscribeBanner.title}
+              </div>
+              <Subscribe />
             </div>
-            <Subscribe blogInnerpostsScroll={true}/>
           </Col>
         </Row>
       </Container>
