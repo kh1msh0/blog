@@ -15,7 +15,7 @@ const BlogPost = ({ data }) => {
                 <p>{month}</p>
               </div>
             </div>
-            <div
+            <div 
               className="post_image"
               style={{ backgroundImage: `url(http://178.128.21.17${cover})` }}
             />
