@@ -3,7 +3,7 @@ import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const BlogPost = ({ data }) => {
-  const { cover, day, description, title, month, id, type, typeDesc  } = data;
+  const { cover, day, description, title, month, id, typeDesc  } = data;
   return (
     <div className="blogpost_card">
       <Card>
