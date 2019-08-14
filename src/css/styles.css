@@ -1079,9 +1079,14 @@
   .related .inner_related .for_relater_responsive {
     position: absolute;
     z-index: 1;
-    margin-top: -130px;
+    margin-top: -142px;
     color: white;
     margin-left: 19px;
+    max-height: 115px;
+    overflow: hidden;
+  }
+  .related .inner_related .for_relater_responsive p {
+    color: #fff !important;
   }
 }
 
