@@ -25,6 +25,8 @@
 .blog_part_1 {
   margin-bottom: 30px;
   .blog_part_1_left {
+    padding-right: 12px;
+    padding-left: 12px;
     .outer_div_first_section{
       border-radius: 1px;
       overflow: hidden;
@@ -82,7 +84,8 @@
   }
   }
   .blog_part_1_right {
-    
+    padding-right: 15px;
+    padding-left: 12px;
     a {
       width: 100%;
       margin-bottom: 24px;

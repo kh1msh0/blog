@@ -35,7 +35,7 @@ const GuideFirstSection = () => {
     return ''
   }
   return (
-    <Container className="" >
+    <Container className="GuideFirstSection" >
       <Row className="">
         {items.map(item => (
           <GuideFirstSectionCard key={item.id} data={item} />

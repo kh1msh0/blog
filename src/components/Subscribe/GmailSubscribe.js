@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Form, InputGroup } from 'react-bootstrap';
-import { FaPaperPlane } from 'react-icons/fa';
+import { IoMdSend } from 'react-icons/io';
 import axios from 'axios';
 
 const GmailSubscribe = ({ data }) => {
@@ -50,7 +50,7 @@ const GmailSubscribe = ({ data }) => {
                         <Form.Label>{email}</Form.Label>
                         <InputGroup>
                             <Form.Control
-                                style={bordercolor ? { border: "1px solid #ced4da", height: '48px' } : { border: "1px solid red", height: '48px' }}
+                                style={bordercolor ? { border: "1px solid #ced4da", height: '48px',borderRight: 'none' } : { border: "1px solid red", height: '48px' }}
                                 onChange={(e) => setInputvalue(e.target.value)}
                                 type="email"
                                 placeholder={placeholder}
@@ -59,7 +59,7 @@ const GmailSubscribe = ({ data }) => {
                                 required
                             />
                             <InputGroup.Prepend>
-                                <InputGroup.Text id="inputGroupPrepend" onClick={() => subscribeMail()}><FaPaperPlane /></InputGroup.Text>
+                                <InputGroup.Text id="inputGroupPrepend" onClick={() => subscribeMail()}><IoMdSend style={{ fontSize: '24px'}} /></InputGroup.Text>
                             </InputGroup.Prepend>
                         </InputGroup>
                     </Form.Group>
