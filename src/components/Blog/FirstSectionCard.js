@@ -8,7 +8,8 @@ const FirstSectionCard = ({ item }) => {
     <Link to={`/blog/${id}`}>
       <div className="outer_div_first_section">
             <div className="gradient">
-              <Button variant="light">ჩვენ გირჩევთ</Button>
+              <div></div>
+              {/* <Button variant="light">ჩვენ გირჩევთ</Button> */}
               <div>
                 <h2>{title}</h2>
                 <h5>{description}</h5>

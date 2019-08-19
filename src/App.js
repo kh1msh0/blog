@@ -24,10 +24,10 @@ function App() {
           <Header  />
           <Switch>
             <Route path="/" exact component={Blog} />
-            <Route path="/guide/:id" exact component={Guide} />
-            <Route path="/guides/catId/:categori" exact component={InnerGuide} />
+            {/* <Route path="/guide/:id" exact component={Guide} /> */}
+            {/* <Route path="/guides/catId/:categori" exact component={InnerGuide} /> */}
             <Route path="/blog/:card" component={InnerPost} />
-            <Route path="/guides/:card" component={InnerGuidePost} />
+            {/* <Route path="/guides/:card" component={InnerGuidePost} /> */}
             <Route path="/search/:search" component={Search} />
             <Redirect to="/" />
           </Switch>
