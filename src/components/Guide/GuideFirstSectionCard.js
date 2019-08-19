@@ -10,7 +10,7 @@ const GuideFirstSectionCard = ({data}) => {
         <Fragment>
           <Col xs={12} sm={6} md={6} lg={4} className="category" >
               <Link to={`/guides/catId/${id}`}>
-                <div className="guide" style={{backgroundImage: `url(http://178.128.21.17${cover})`}}>
+                <div className="guide" style={{backgroundImage: `url(${cover})`}}>
                     <div className="guide_text_on_image" >
                         <h2>
                             {title}

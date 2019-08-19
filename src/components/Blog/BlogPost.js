@@ -17,7 +17,7 @@ const BlogPost = ({ data }) => {
             </div>
             <div 
               className="post_image"
-              style={{ backgroundImage: `url(http://178.128.21.17${cover})` }}
+              style={{ backgroundImage: `url(${cover})` }}
             />
           </div>
           <Card.Body className="for_relater_responsive">

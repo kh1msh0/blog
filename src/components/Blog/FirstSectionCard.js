@@ -17,7 +17,7 @@ const FirstSectionCard = ({ item }) => {
             </div>
         <div
           className="image_div"
-          style={{ backgroundImage: `url(http://178.128.21.17${cover})` }}
+          style={{ backgroundImage: `url(${cover})` }}
           >
           {/* <div style={{transform: 'scale(.9)'}} > */}
         </div>

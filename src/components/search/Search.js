@@ -24,7 +24,7 @@ const Search = (props) => {
     if(!(/^ *$/.test(serchingObject))){
       const title = serchingObject
       console.log(window.location.origin)
-      axios.post(`http://178.128.21.17/api/search`, {
+      axios.post(`/api/search`, {
         key: title
       })
         .then(function (response) {
@@ -41,7 +41,7 @@ const Search = (props) => {
   const searchItemonLoad = (e) => {
     const title = props.match.params.search
     console.log(title)
-    axios.post(`http://178.128.21.17/api/search`, {
+    axios.post(`/api/search`, {
       key: title
     })
       .then(function (response) {

@@ -5,7 +5,7 @@ const InnerPostbody = ({ data }) => {
     return (
         <Fragment>
             
-            <div className="inner_post_section1" style={{ backgroundImage: `url(http://178.128.21.17${cover})` }}>
+            <div className="inner_post_section1" style={{ backgroundImage: `url(${cover})` }}>
                 <div className="inner_post_section1_on_img">
 
                 </div>

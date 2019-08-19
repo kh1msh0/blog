@@ -15,7 +15,7 @@ const JoinComunity = ({ data }) => {
                     {subtitle}
                 </p>
                 <div className="area_circle_logo">
-                    <img src={`http://178.128.21.17${icon}`} alt="" />
+                    <img src={`${icon}`} alt="" />
                 </div>
                 <div className="joincomunity_button">
                     <Button href={buttonUrl} style={{padding: '.8rem 1rem'}} variant="primary" size="lg" block>

@@ -10,7 +10,7 @@ const SearchedPost = ({ item }) => {
         <Link to={!item.type ? `/blog/${id}`: `/guides/${id}`} className="search_inner_post_link">
             <div className="SearchedPost" >
                 <Col xs={12} md={4} lg={4}>
-                    <div className="image" style={{ backgroundImage: `url(http://178.128.21.17${cover})` }} >
+                    <div className="image" style={{ backgroundImage: `url(${cover})` }} >
                     </div>
                 </Col>
                 <div className="text">

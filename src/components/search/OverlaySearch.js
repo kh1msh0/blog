@@ -17,7 +17,7 @@ const OverlaySearch = () => {
     const searchItem = (e) => {
         const title = e.target.value
         console.log(title)
-        axios.post('http://178.128.21.17/api/search', {
+        axios.post('/api/search', {
             key: title
         }) 
             .then(function (response) {
