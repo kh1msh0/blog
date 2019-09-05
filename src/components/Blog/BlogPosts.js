@@ -19,6 +19,7 @@ const BlogPosts = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
+      
       var testDiv = document.getElementById("testi");
       if (testDiv) {
         setTestDivWidth(testDiv.offsetWidth);
@@ -33,7 +34,7 @@ const BlogPosts = () => {
         setScrolled(false);
       }
 
-      if (document.body.scrollHeight - window.scrollY < 860) {
+      if (document.body.scrollHeight - window.scrollY < 860+274+40) {
         setIsEnd(true);
       } else {
         setIsEnd(false);

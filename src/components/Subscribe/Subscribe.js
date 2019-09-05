@@ -29,7 +29,7 @@ const Subscribe = props => {
         }
 
         if (
-          document.body.scrollHeight - window.scrollY < 1284 &&
+          document.body.scrollHeight - window.scrollY < 1284+274+40 &&
           props.innerpostsScroll
         ) {
           setIsEnd(true);
