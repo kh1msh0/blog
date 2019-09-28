@@ -61,7 +61,7 @@ const InnerPost = ({ match }) => {
         </Container>
         <Container className="related">
           <div className="related_title">
-            <div>Related articles and tips</div>
+            <div>თემატური სტატიები</div>
             <div className="line" />
           </div>
           <Row>

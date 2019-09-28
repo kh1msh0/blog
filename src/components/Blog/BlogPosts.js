@@ -23,7 +23,7 @@ const BlogPosts = () => {
       var testDiv = document.getElementById("testi");
       if (testDiv) {
         setTestDivWidth(testDiv.offsetWidth);
-        var isTop = window.scrollY < testDiv.offsetTop - 70;
+        var isTop = window.scrollY < testDiv.offsetTop -30;
       } else {
         isTop = true;
       }
@@ -34,7 +34,7 @@ const BlogPosts = () => {
         setScrolled(false);
       }
 
-      if (document.body.scrollHeight - window.scrollY < 860+274+40) {
+      if (document.body.scrollHeight - window.scrollY < 860+274-20) {
         setIsEnd(true);
       } else {
         setIsEnd(false);
@@ -46,7 +46,7 @@ const BlogPosts = () => {
 
   const style = {
     position: "fixed",
-    top: "70px",
+    top: "30px",
     flexDirection: "column",
     width: `${testDivWidth - 30}px`
   };
@@ -100,7 +100,8 @@ const BlogPosts = () => {
                 className="posts_head"
                 style={{ width: `${testDivWidth - 30}px` }}
               >
-                {fetchedStrings.data.subscribeBanner.title}
+                
+                {/* {fetchedStrings.data.subscribeBanner.title} */}
               </div>
               <Subscribe />
             </div>

@@ -18,7 +18,7 @@
     "react-scripts": "3.0.1",
     "react-share": "^3.0.0"
   },
-  "proxy": "http://18.194.140.181/",
+  "proxy": "https://blog.area.ge/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
