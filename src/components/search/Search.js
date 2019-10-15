@@ -5,6 +5,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Loading from '../Loading'
 import { SearchedPost } from '../search';
 import { FaSistrix } from 'react-icons/fa';
+import Helmet from 'react-helmet';
 
 import axios from "axios";
 
@@ -74,7 +75,14 @@ const paginate = (pageNumber) => setCurrentPage(pageNumber)
 
   return (
     <Container className="blog_posts_1 search">
-          <div style={{fontSize: '18px', color: '#969696'}}>{isLoading ? 'searching' : items.length} Results for "{serchingObject}" </div>
+      <Helmet>
+          <title>Blog.area.ge</title>
+          <meta property="og:url" content={`https://blog.area.ge/`} />
+          <meta property="og:type" content="blog.area.ge" />
+          <meta property="og:title" content="Blog.area.ge" />
+          <meta property="og:image" content="https://blog.area.ge/static/media/logo.4e7d8529.svg" />
+        </Helmet>
+      <div style={{fontSize: '18px', color: '#969696'}}>{isLoading ? 'searching' : items.length} Results for "{serchingObject}" </div>
       <Row className="blog_part_1_row">
         <Col xs={12} md={12} lg={8} className="blog_posts_left">
           <div className="posts_head">
