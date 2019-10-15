@@ -6,6 +6,7 @@ import { BlogPost } from "../Blog";
 import SocialSharing from "../SocialSharing";
 import axios from "axios";
 import Loading from "../Loading";
+import Helmet from 'react-helmet';
 
 const InnerPost = ({ match }) => {
   const [item, setItem] = useState({});
@@ -32,6 +33,14 @@ const InnerPost = ({ match }) => {
   } else {
     return (
       <Fragment>
+        
+        <Helmet>
+                <title>{item.title}</title>
+                <meta property="og:url" content={`https://blog.area.ge/blog/${item.id}`} />
+                <meta property="og:type" content="article" />
+                <meta property="og:title" content={item.title} />
+                <meta property="og:image" content={`https://blog.area.ge/${item.cover}`} />
+          </Helmet>
         <Container>
           <Row>
             <Col xs={12} md={12} />
