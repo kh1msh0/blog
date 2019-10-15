@@ -38,9 +38,9 @@ const InnerPost = ({ match }) => {
           </Row>
         </Container>
         <Container className="blog_posts_1">
-        <div className="inner_post_section1_div">
+        <h1 className="inner_post_section1_div">
             {item.title}
-          </div>
+          </h1>
           <Row className="blog_part_1_row">
             <Col xs={12} md={12} lg={8} className="blog_posts_left">
               <InnerPostbody data={item} />
