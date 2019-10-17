@@ -24,8 +24,11 @@ const InnerPost = ({ match }) => {
   }
 
   useEffect(() => {
+    window.scrollTo(0, 0)
     fetchItem();
   }, [match.params.card]);
+
+
   const { related } = item;
 
   if (isLoading) {

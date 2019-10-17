@@ -73,6 +73,9 @@ const paginate = (pageNumber) => setCurrentPage(pageNumber)
     setSerchingObject(props.match.params.search)
   }, [])
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <Container className="blog_posts_1 search">
       <Helmet>

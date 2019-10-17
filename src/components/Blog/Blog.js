@@ -1,5 +1,6 @@
 import React, {
   Fragment,
+  useEffect
 } from 'react';
 import FirstSection from './FirstSection';
 import BlogPosts from './BlogPosts';
@@ -11,7 +12,9 @@ import { useStore } from "outstated";
 import { GetBlogList } from "../store";
 const Blog = () => {
   const { isLoading } = useStore(GetBlogList);
-
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 if(isLoading){
   return <Loading/>
 }else{

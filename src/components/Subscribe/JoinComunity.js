@@ -14,7 +14,7 @@ const JoinComunity = ({ data }) => {
                 <p>
                     {subtitle}
                 </p>
-                <a href="https://area.ge/" className="area_circle_logo">
+                <a href="https://area.ge/" target="_blank" className="area_circle_logo">
                     <img src={`${icon}`} alt="" />
                 </a>
                 <div className="joincomunity_button">
