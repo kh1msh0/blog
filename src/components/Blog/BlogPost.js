@@ -1,9 +1,9 @@
-import React from "react";
-import { Card } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const BlogPost = ({ data }) => {
-  const { cover, day, description, title, month, id, typeDesc  } = data;
+  const { cover, day, description, title, month, id, typeDesc } = data;
   return (
     <div className="blogpost_card">
       <Card>
@@ -15,14 +15,18 @@ const BlogPost = ({ data }) => {
                 <p>{month}</p>
               </div>
             </div>
-            <div 
+            <div
               className="post_image"
               style={{ backgroundImage: `url(${cover})` }}
             />
           </div>
           <Card.Body className="for_relater_responsive">
-            <Card.Title>{title}</Card.Title>
-            {typeDesc  ? <div style={{fontSize:16, color:'#2B2B2B'}}>გაიდები/{typeDesc }</div>: null}
+            <Card.Title className="title">{title}</Card.Title>
+            {typeDesc ? (
+              <div style={{ fontSize: 16, color: '#2B2B2B' }}>
+                გაიდები/{typeDesc}
+              </div>
+            ) : null}
             <Card.Text>{description}</Card.Text>
           </Card.Body>
         </Link>

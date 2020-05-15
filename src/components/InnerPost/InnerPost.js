@@ -1,11 +1,11 @@
-import React, { Fragment, useState, useEffect } from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import { Subscribe } from "../Subscribe";
-import { InnerPostbody, InnerPostHead } from "../InnerPost";
-import { BlogPost } from "../Blog";
-import SocialSharing from "../SocialSharing";
-import axios from "axios";
-import Loading from "../Loading";
+import React, { Fragment, useState, useEffect } from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+import { Subscribe } from '../Subscribe';
+import { InnerPostbody, InnerPostHead } from '../InnerPost';
+import { BlogPost } from '../Blog';
+import SocialSharing from '../SocialSharing';
+import axios from 'axios';
+import Loading from '../Loading';
 import Helmet from 'react-helmet';
 
 const InnerPost = ({ match }) => {
@@ -24,10 +24,9 @@ const InnerPost = ({ match }) => {
   }
 
   useEffect(() => {
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
     fetchItem();
   }, [match.params.card]);
-
 
   const { related } = item;
 
@@ -36,23 +35,26 @@ const InnerPost = ({ match }) => {
   } else {
     return (
       <Fragment>
-        
         <Helmet>
-                <title>{item.title}</title>
-                <meta property="og:url" content={`https://blog.area.ge/blog/${item.id}`} />
-                <meta property="og:type" content="article" />
-                <meta property="og:title" content={item.title} />
-                <meta property="og:image" content={`https://blog.area.ge/${item.cover}`} />
-          </Helmet>
+          <title>{item.title}</title>
+          <meta
+            property="og:url"
+            content={`https://blog.area.ge/blog/${item.id}`}
+          />
+          <meta property="og:type" content="article" />
+          <meta property="og:title" content={item.title} />
+          <meta
+            property="og:image"
+            content={`https://blog.area.ge/${item.cover}`}
+          />
+        </Helmet>
         <Container>
           <Row>
             <Col xs={12} md={12} />
           </Row>
         </Container>
         <Container className="blog_posts_1">
-        <h1 className="inner_post_section1_div">
-            {item.title}
-          </h1>
+          <h1 className="inner_post_section1_div">{item.title}</h1>
           <Row className="blog_part_1_row">
             <Col xs={12} md={12} lg={8} className="blog_posts_left">
               <InnerPostbody data={item} />

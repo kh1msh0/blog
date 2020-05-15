@@ -1597,15 +1597,15 @@
 }
 
 body {
-  font-family: "NotoSansGeorgian_regular", "NotoSans_regular","sans-serif";
+  font-family: 'NotoSansGeorgian_regular', 'NotoSans_regular', 'sans-serif';
 }
 
-body a {
+body .title {
   color: black;
   text-decoration: none;
 }
 
-body a:hover {
+body .title:hover {
   text-decoration: none;
   color: black;
 }
@@ -1651,7 +1651,7 @@ body .loading {
 }
 
 .show_more_button .showmore:hover {
-  background-color: #2B2B2B;
+  background-color: #2b2b2b;
 }
 
 .show_more_button .showmore p {
@@ -1708,7 +1708,7 @@ body .loading {
 }
 
 .socials_main .socials .social_count .myShareCountWrapper {
-  font-family: "NotoSans_bold", "NotoSansGeorgian_bold", "sans-serif";
+  font-family: 'NotoSans_bold', 'NotoSansGeorgian_bold', 'sans-serif';
   font-size: 30px;
   font-weight: 900;
   line-height: 0.8;
@@ -1834,7 +1834,7 @@ body .loading {
 }
 
 .fb-save * iframe {
-  opacity: .01;
+  opacity: 0.01;
   width: 52px !important;
   height: 52px !important;
 }
