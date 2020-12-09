@@ -10,10 +10,10 @@ const BlogPost = ({ data }) => {
         <Link to={data.categories ? `/guides/${id}` : `/blog/${id}`}>
           <div className="outer_div">
             <div className="onhover_background">
-              <div className="on_post_image">
+              {/* <div className="on_post_image">
                 <div>{day}</div>
                 <p>{month}</p>
-              </div>
+              </div> */}
             </div>
             <div
               className="post_image"
